@@ -2,7 +2,7 @@ name: Publicar en GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, claude/recetario-upload-ugcati]
   workflow_dispatch:
 
 permissions:
