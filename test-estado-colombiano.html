@@ -461,34 +461,18 @@ details.guia[open]>summary::before{content:"–"}
       <ul class="temario" id="lista-temas"></ul>
     </div>
 
-    <form class="campos" id="form-inicio" novalidate>
-      <div class="campo">
-        <label for="f-nombre">Nombre completo <span class="ayuda">(obligatorio)</span></label>
-        <input type="text" id="f-nombre" name="nombre" autocomplete="name" required maxlength="90" placeholder="Ej.: María Fernanda Ospina">
-      </div>
-      <div class="campo">
-        <label for="f-org">Organización o proceso social <span class="ayuda">(obligatorio)</span></label>
-        <input type="text" id="f-org" name="organizacion" autocomplete="organization" required maxlength="90" placeholder="Ej.: Junta de Acción Comunal La Esperanza">
-      </div>
-      <div class="campo">
-        <label for="f-mun">Municipio y departamento <span class="ayuda">(obligatorio)</span></label>
-        <input type="text" id="f-mun" name="municipio" required maxlength="90" placeholder="Ej.: Apartadó, Antioquia">
-      </div>
-      <div class="campo">
-        <label for="f-correo">Correo electrónico <span class="ayuda">(opcional, para recibir retroalimentación)</span></label>
-        <input type="email" id="f-correo" name="correo" autocomplete="email" maxlength="120" placeholder="nombre@correo.com">
-      </div>
-      <label class="check">
-        <input type="checkbox" id="f-consent" required>
-        <span>Autorizo que mis respuestas y mi puntaje se registren para el análisis pedagógico del proceso de formación.</span>
-      </label>
-      <div id="error-inicio" class="aviso malo oculto" role="alert"></div>
-      <button class="btn btn-principal btn-bloque" type="submit">Comenzar la prueba</button>
-    </form>
+    <div class="aviso ocre">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v5.5c0 4.4 3.1 8.5 8 9.5 4.9-1 8-5.1 8-9.5V6l-8-3Z"/><path d="M9.5 12.2 11 14l3.5-4"/></svg>
+      <span><b>Respuesta anónima.</b> No se le pide nombre, correo, organización ni ningún otro dato
+        personal. Al terminar recibirá un código aleatorio, generado en su propio dispositivo, que
+        sirve únicamente para identificar el intento si necesita consultarlo después.</span>
+    </div>
+    <button class="btn btn-principal btn-bloque" type="button" id="btn-comenzar">Comenzar la prueba</button>
 
     <p style="font-size:12.5px;color:var(--tinta-3)">
-      Sus datos se guardan en este dispositivo y, si la coordinación configuró un repositorio central,
-      también se envían allí. No se comparten con terceros.
+      Las respuestas quedan en este dispositivo y, si la coordinación configuró un repositorio
+      central, también se envían allí de forma anónima: solo el código del intento, las respuestas
+      marcadas y el tiempo empleado.
     </p>
   </div>
 </section>
@@ -541,7 +525,8 @@ details.guia[open]>summary::before{content:"–"}
         <summary>Ver mi código de resultado</summary>
         <div class="guia-cuerpo">
           <p>Si la coordinación no tiene repositorio central configurado, copie este código y envíelo
-             por el canal que le indiquen. Contiene únicamente sus datos y sus respuestas.</p>
+             por el canal que le indiquen. Contiene solo el código del intento, las respuestas
+             marcadas y el tiempo empleado: ningún dato personal.</p>
           <div class="codigo-caja" id="codigo-resultado"></div>
         </div>
       </details>
@@ -564,7 +549,7 @@ details.guia[open]>summary::before{content:"–"}
       <p class="eyebrow">Acceso restringido</p>
       <h1 style="font-size:25px;margin-top:4px">Panel de la coordinación</h1>
       <p style="font-size:14.5px;color:var(--tinta-2);margin-top:8px">
-        Consulte los resultados de todas las personas participantes, las gráficas de desempeño y la
+        Consulte los resultados anónimos de todos los intentos, las gráficas de desempeño y la
         exportación de datos.
       </p>
     </div>
@@ -615,7 +600,7 @@ details.guia[open]>summary::before{content:"–"}
       <div class="cab-seccion">
         <div>
           <h3 style="font-size:17px">Registros individuales</h3>
-          <p>Cada fila es un intento. Toque una fila para ver el detalle de sus respuestas.</p>
+          <p>Cada fila es un intento anónimo, identificado solo por su código. Toque «Ver» para revisar respuesta por respuesta.</p>
         </div>
         <div class="fila-btns">
           <button class="btn btn-secundario" id="btn-csv" type="button">Exportar CSV</button>
@@ -623,8 +608,8 @@ details.guia[open]>summary::before{content:"–"}
         </div>
       </div>
       <div class="campo" style="max-width:340px">
-        <label for="f-buscar" class="solo-lectores">Buscar participante</label>
-        <input type="text" id="f-buscar" placeholder="Buscar por nombre, organización o municipio">
+        <label for="f-buscar" class="solo-lectores">Buscar por código de intento</label>
+        <input type="text" id="f-buscar" placeholder="Buscar por código de intento (por ejemplo K4M-92T)">
       </div>
       <div class="tabla-envolt" id="tabla-participantes"></div>
       <div id="detalle-participante"></div>
@@ -1104,9 +1089,21 @@ function mezclar(arreglo) {
   return copia;
 }
 
-function iniciarPrueba(datos) {
+/* Código aleatorio del intento: no identifica a la persona, solo permite
+   distinguir y consultar un intento concreto. */
+function codigoAnonimo() {
+  const alfabeto = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // sin caracteres confundibles
+  let salida = "";
+  for (let i = 0; i < 6; i++) {
+    salida += alfabeto[Math.floor(Math.random() * alfabeto.length)];
+    if (i === 2) salida += "-";
+  }
+  return salida;
+}
+
+function iniciarPrueba() {
   sesion = {
-    participante: datos,
+    codigo: codigoAnonimo(),
     inicio: new Date().toISOString(),
     inicioMs: Date.now(),
     marcaPregunta: Date.now(),
@@ -1240,11 +1237,8 @@ async function terminar() {
   const duracion = Math.round((Date.now() - sesion.inicioMs) / 1000);
   const registro = {
     id: "r" + Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
-    version: 1,
-    nombre: sesion.participante.nombre,
-    organizacion: sesion.participante.organizacion,
-    municipio: sesion.participante.municipio,
-    correo: sesion.participante.correo,
+    version: 2,
+    codigo: sesion.codigo,
     inicio: sesion.inicio,
     fin: new Date().toISOString(),
     duracionSeg: duracion,
@@ -1258,11 +1252,12 @@ async function terminar() {
   const guardo = guardarRegistros(lista);
 
   const nivel = nivelDe(registro.puntaje);
-  $("#res-saludo").textContent = registro.nombre.split(" ")[0] + ", así le fue";
+  $("#res-saludo").textContent = "Así le fue en la prueba";
   $("#aro").innerHTML = aro(registro.puntaje);
   $("#res-nivel").textContent = nivel.nombre;
   $("#res-mensaje").textContent = nivel.mensaje;
-  $("#res-meta").textContent = "Tiempo total " + minutos(duracion) + " · " + fechaLegible(registro.fin);
+  $("#res-meta").textContent = "Intento " + registro.codigo + " · tiempo total " +
+    minutos(duracion) + " · " + fechaLegible(registro.fin);
 
   const temas = porTema(registro.respuestas);
   $("#res-temas").innerHTML = Object.keys(temas).map(function (t) {
@@ -1292,7 +1287,7 @@ async function terminar() {
   $("#codigo-resultado").textContent = codigo;
   $("#btn-copiar-codigo").onclick = function () { copiar(codigo, "Código copiado."); };
   $("#btn-descargar-mio").onclick = function () {
-    descargar("resultado-" + registro.nombre.toLowerCase().replace(/[^a-z0-9]+/g, "-") + ".json",
+    descargar("resultado-" + registro.codigo.toLowerCase() + ".json",
       JSON.stringify(registro, null, 2), "application/json");
   };
 
@@ -1307,7 +1302,7 @@ async function terminar() {
   } else if (envio.estado === "sin-config") {
     zona.innerHTML = '<div class="aviso' + (guardo ? "" : " malo") + '">' +
       '<span>' + (guardo
-        ? "Resultado guardado en este dispositivo. Si la coordinación se lo pide, envíele el código de resultado que aparece abajo."
+        ? "Resultado anónimo guardado en este dispositivo. Si la coordinación se lo pide, envíele el código de resultado que aparece abajo."
         : "Este navegador bloquea el almacenamiento local. Copie el código de resultado y envíelo a la coordinación para que quede registrado.") +
       '</span></div>';
   } else {
@@ -1479,7 +1474,7 @@ function pintarPanel() {
       '<span>Las gráficas aparecen apenas se registre el primer intento.</span>' +
       '<button class="btn btn-secundario" type="button" onclick="document.getElementById(\'btn-copiar-enlace\').click()">Copiar enlace de la prueba</button>' +
       '</div></div>';
-    $("#tabla-participantes").innerHTML = '<div class="vacio"><strong>Sin participantes</strong>' +
+    $("#tabla-participantes").innerHTML = '<div class="vacio"><strong>Sin intentos registrados</strong>' +
       '<span>Comparta el enlace para recibir los primeros resultados.</span></div>';
     $("#tabla-preguntas").innerHTML = '<div class="vacio"><strong>Sin respuestas</strong>' +
       '<span>El análisis por pregunta requiere al menos un intento.</span></div>';
@@ -1548,25 +1543,25 @@ function pintarPanel() {
   const busqueda = filtroBusqueda.trim().toLowerCase();
   const visibles = regs.filter(function (r) {
     if (!busqueda) return true;
-    return [r.nombre, r.organizacion, r.municipio, r.correo].join(" ").toLowerCase().indexOf(busqueda) >= 0;
+    return String(r.codigo || r.id).toLowerCase().indexOf(busqueda) >= 0;
   });
 
   $("#tabla-participantes").innerHTML = visibles.length
     ? '<table><thead><tr>' +
-        '<th>Fecha</th><th>Nombre</th><th>Organización</th><th>Municipio</th>' +
-        '<th class="num">Puntaje</th><th class="num">Tiempo</th><th></th>' +
+        '<th>Código</th><th>Fecha</th><th class="num">Puntaje</th>' +
+        '<th class="num">Acierto</th><th class="num">Tiempo</th><th></th>' +
       '</tr></thead><tbody>' +
       visibles.map(function (r) {
         const pct = (r.puntaje / (r.total || TOTAL)) * 100;
-        return '<tr><td style="white-space:nowrap">' + esc(fechaLegible(r.fin)) + '</td>' +
-          '<td><b>' + esc(r.nombre) + '</b>' + (r.correo ? '<br><span style="color:var(--tinta-3);font-size:12px">' + esc(r.correo) + '</span>' : '') + '</td>' +
-          '<td>' + esc(r.organizacion) + '</td>' +
-          '<td>' + esc(r.municipio) + '</td>' +
+        return '<tr><td><b style="font-family:var(--mono);letter-spacing:.04em">' +
+            esc(r.codigo || "—") + '</b></td>' +
+          '<td style="white-space:nowrap">' + esc(fechaLegible(r.fin)) + '</td>' +
           '<td class="num"><span class="chip ' + clasePct(pct) + '">' + r.puntaje + '/' + (r.total || TOTAL) + '</span></td>' +
+          '<td class="num">' + Math.round(pct) + '%</td>' +
           '<td class="num">' + minutos(r.duracionSeg || 0) + '</td>' +
           '<td><button class="btn btn-plano" type="button" data-detalle="' + esc(r.id) + '">Ver</button></td></tr>';
       }).join("") + '</tbody></table>'
-    : '<div class="vacio"><strong>Sin coincidencias</strong><span>Ninguna persona coincide con «' + esc(filtroBusqueda) + '».</span></div>';
+    : '<div class="vacio"><strong>Sin coincidencias</strong><span>Ningún intento coincide con «' + esc(filtroBusqueda) + '».</span></div>';
 
   $$("#tabla-participantes [data-detalle]").forEach(function (b) {
     b.addEventListener("click", function () { verDetalle(b.dataset.detalle); });
@@ -1598,9 +1593,10 @@ function verDetalle(id) {
   const zona = $("#detalle-participante");
   zona.innerHTML = '<div class="panel-grafica">' +
     '<div class="cab-seccion"><div><p class="eyebrow">Detalle del intento</p>' +
-      '<h3 style="font-size:18px;margin-top:3px">' + esc(r.nombre) + '</h3>' +
-      '<p>' + esc(r.organizacion) + ' · ' + esc(r.municipio) + ' · ' + esc(fechaLegible(r.fin)) +
-      ' · ' + minutos(r.duracionSeg || 0) + '</p></div>' +
+      '<h3 style="font-size:18px;margin-top:3px;font-family:var(--mono);letter-spacing:.04em">' +
+        esc(r.codigo || r.id) + '</h3>' +
+      '<p>' + esc(fechaLegible(r.fin)) + ' · ' + minutos(r.duracionSeg || 0) +
+      ' · ' + r.puntaje + '/' + (r.total || TOTAL) + ' aciertos</p></div>' +
       '<button class="btn btn-plano" type="button" id="btn-cerrar-detalle">Cerrar</button></div>' +
     '<div class="tabla-envolt"><table><thead><tr><th>N.º</th><th>Pregunta</th>' +
       '<th>Respuesta elegida</th><th class="num">Resultado</th></tr></thead><tbody>' +
@@ -1621,8 +1617,7 @@ function verDetalle(id) {
    9. EXPORTACIÓN
    ============================================================ */
 function aCsv(regs) {
-  const cab = ["fecha_fin", "nombre", "organizacion", "municipio", "correo",
-    "puntaje", "total", "porcentaje", "minutos"];
+  const cab = ["codigo", "fecha_fin", "puntaje", "total", "porcentaje", "minutos"];
   PREGUNTAS.forEach(function (p, i) {
     cab.push("p" + (i + 1) + "_acierto");
     cab.push("p" + (i + 1) + "_opcion");
@@ -1635,8 +1630,7 @@ function aCsv(regs) {
 
   const filas = regs.map(function (r) {
     const fila = [
-      r.fin, r.nombre, r.organizacion, r.municipio, r.correo || "",
-      r.puntaje, r.total || TOTAL,
+      r.codigo || r.id, r.fin, r.puntaje, r.total || TOTAL,
       Math.round((r.puntaje / (r.total || TOTAL)) * 100),
       ((r.duracionSeg || 0) / 60).toFixed(1)
     ];
@@ -1664,8 +1658,8 @@ const SCRIPT_APPS = [
   "    const datos = JSON.parse(e.postData.contents);",
   "    if (datos.clave !== CLAVE) return responder({ ok: false, error: 'clave invalida' });",
   "    const r = datos.registro;",
-  "    hoja().appendRow([r.id, r.fin, r.nombre, r.organizacion, r.municipio,",
-  "      r.correo || '', r.puntaje, r.total, r.duracionSeg, JSON.stringify(r)]);",
+  "    hoja().appendRow([r.id, r.codigo, r.fin, r.puntaje, r.total,",
+  "      r.duracionSeg, JSON.stringify(r)]);",
   "    return responder({ ok: true });",
   "  } catch (err) { return responder({ ok: false, error: String(err) }); }",
   "}",
@@ -1676,7 +1670,7 @@ const SCRIPT_APPS = [
   "    const filas = hoja().getDataRange().getValues();",
   "    const registros = [];",
   "    for (var i = 1; i < filas.length; i++) {",
-  "      if (filas[i][9]) { try { registros.push(JSON.parse(filas[i][9])); } catch (x) {} }",
+  "      if (filas[i][6]) { try { registros.push(JSON.parse(filas[i][6])); } catch (x) {} }",
   "    }",
   "    return responder({ ok: true, registros: registros });",
   "  } catch (err) { return responder({ ok: false, error: String(err) }); }",
@@ -1687,8 +1681,7 @@ const SCRIPT_APPS = [
   "  var h = libro.getSheetByName(HOJA);",
   "  if (!h) {",
   "    h = libro.insertSheet(HOJA);",
-  "    h.appendRow(['id', 'fecha', 'nombre', 'organizacion', 'municipio',",
-  "      'correo', 'puntaje', 'total', 'segundos', 'json']);",
+  "    h.appendRow(['id', 'codigo', 'fecha', 'puntaje', 'total', 'segundos', 'json']);",
   "  }",
   "  return h;",
   "}",
@@ -1714,33 +1707,10 @@ const SCRIPT_APPS = [
 
 $("#script-apps").textContent = SCRIPT_APPS;
 
-/* --- Inicio de la prueba --- */
-$("#form-inicio").addEventListener("submit", function (ev) {
-  ev.preventDefault();
-  const nombre = $("#f-nombre").value.trim();
-  const organizacion = $("#f-org").value.trim();
-  const municipio = $("#f-mun").value.trim();
-  const correo = $("#f-correo").value.trim();
-  const error = $("#error-inicio");
-
-  const faltan = [];
-  if (nombre.length < 3) faltan.push("su nombre completo");
-  if (!organizacion) faltan.push("su organización o proceso social");
-  if (!municipio) faltan.push("su municipio y departamento");
-  if (correo && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) faltan.push("un correo válido (o déjelo vacío)");
-  if (!$("#f-consent").checked) faltan.push("la autorización para registrar sus respuestas");
-
-  if (faltan.length) {
-    error.textContent = "Falta " + faltan.join("; ") + ".";
-    error.classList.remove("oculto");
-    return;
-  }
-  error.classList.add("oculto");
-  iniciarPrueba({ nombre: nombre, organizacion: organizacion, municipio: municipio, correo: correo });
-});
+/* --- Inicio de la prueba: sin formulario, la respuesta es anónima --- */
+$("#btn-comenzar").addEventListener("click", function () { iniciarPrueba(); });
 
 $("#btn-reiniciar").addEventListener("click", function () {
-  $("#f-consent").checked = false;
   mostrar("vista-inicio");
 });
 
@@ -1869,7 +1839,7 @@ $("#btn-guardar-endpoint").addEventListener("click", function () {
   guardarConfig(cfg);
   $("#estado-endpoint").innerHTML = cfg.endpoint
     ? '<div class="aviso bueno"><span>Repositorio guardado. Los próximos resultados se enviarán allí automáticamente.</span></div>'
-    : '<div class="aviso"><span>Sin repositorio central: los resultados quedarán solo en el dispositivo de cada participante.</span></div>';
+    : '<div class="aviso"><span>Sin repositorio central: los resultados quedarán solo en el dispositivo de cada quien.</span></div>';
 });
 
 $("#btn-probar-endpoint").addEventListener("click", async function () {

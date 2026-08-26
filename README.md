@@ -19,6 +19,8 @@ Estado, ramas del poder y administración pública, pensado para líderes social
 - Enlace para compartir: https://eidherjulian61.github.io/recetario/test-estado-colombiano.html
 - Panel de la coordinación: el mismo enlace con `#panel` al final. Contraseña inicial `estado2026`
   (cámbiela desde la pestaña «Configuración»).
+- Respuesta anónima: no se pide nombre, correo ni ningún dato personal. Cada intento se
+  identifica con un código aleatorio generado en el propio dispositivo.
 - Los resultados se guardan en el navegador de cada participante. Para reunirlos en un solo lugar,
   configure el repositorio central (Google Apps Script) desde el panel; el código listo para pegar
   está allí mismo.
