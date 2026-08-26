@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prueba del Estado Colombiano</title>
+<meta name="description" content="Test interactivo de 10 preguntas de alta dificultad sobre el Estado colombiano, el presupuesto público y la administración pública, para líderes sociales.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Prueba del Estado Colombiano">
+<meta property="og:description" content="10 preguntas de alta dificultad sobre presupuesto público, estructura del Estado y ramas del poder público.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* ============================================================
+   Prueba del Estado Colombiano
+   Tokens: tinta navy + ocre de sello sobre papel frio.
+   Tema claro en :root; oscuro por preferencia del sistema y por
+   estampa data-theme. Ningun color se declara solo dentro de un
+   bloque de media o [data-theme].
+   ============================================================ */
+:root{
+  --papel:#EDF0F5;
+  --sup:#FFFFFF;
+  --sup-2:#F5F7FB;
+  --tinta:#141E33;
+  --tinta-2:#4C5A72;
+  --tinta-3:#78849C;
+  --linea:#D7DDE8;
+  --linea-2:#E7EBF3;
+  --marca:#173257;
+  --marca-2:#284C7D;
+  --marca-tenue:#E5EAF3;
+  --sobre-marca:#FFFFFF;
+  --ocre:#8A6412;
+  --ocre-fuerte:#C08A1C;
+  --ocre-tenue:#FAF1DC;
+  --ok:#1C6B4C;
+  --ok-tenue:#E4F1EA;
+  --mal:#A93226;
+  --mal-tenue:#FAE9E6;
+  --sombra:0 1px 2px rgba(20,30,51,.06), 0 8px 24px -12px rgba(20,30,51,.18);
+  --sombra-alta:0 2px 4px rgba(20,30,51,.08), 0 18px 40px -18px rgba(20,30,51,.28);
+  --radio:14px;
+  --radio-sm:9px;
+  --ui:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --papel:#0B1120;
+    --sup:#141C2E;
+    --sup-2:#1A2338;
+    --tinta:#E8ECF3;
+    --tinta-2:#AEB8CB;
+    --tinta-3:#818DA5;
+    --linea:#2B3651;
+    --linea-2:#212B42;
+    --marca:#2C4E82;
+    --marca-2:#3D68A8;
+    --marca-tenue:#1B2941;
+    --sobre-marca:#FFFFFF;
+    --ocre:#E3B65C;
+    --ocre-fuerte:#E3B65C;
+    --ocre-tenue:#2A2515;
+    --ok:#5FCB9B;
+    --ok-tenue:#14291F;
+    --mal:#F08272;
+    --mal-tenue:#301A17;
+    --sombra:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    --sombra-alta:0 2px 4px rgba(0,0,0,.45), 0 18px 40px -18px rgba(0,0,0,.75);
+  }
+}
+:root[data-theme="dark"]{
+  --papel:#0B1120;
+  --sup:#141C2E;
+  --sup-2:#1A2338;
+  --tinta:#E8ECF3;
+  --tinta-2:#AEB8CB;
+  --tinta-3:#818DA5;
+  --linea:#2B3651;
+  --linea-2:#212B42;
+  --marca:#2C4E82;
+  --marca-2:#3D68A8;
+  --marca-tenue:#1B2941;
+  --sobre-marca:#FFFFFF;
+  --ocre:#E3B65C;
+  --ocre-fuerte:#E3B65C;
+  --ocre-tenue:#2A2515;
+  --ok:#5FCB9B;
+  --ok-tenue:#14291F;
+  --mal:#F08272;
+  --mal-tenue:#301A17;
+  --sombra:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  --sombra-alta:0 2px 4px rgba(0,0,0,.45), 0 18px 40px -18px rgba(0,0,0,.75);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--papel);
+  color:var(--tinta);
+  font-family:var(--ui);
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+h1,h2,h3,h4{margin:0;font-weight:600;line-height:1.2;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+button{font:inherit;color:inherit}
+a{color:var(--marca-2)}
+:root[data-theme="dark"] a,
+:root:not([data-theme="light"]) a{color:var(--marca-2)}
+:focus-visible{outline:3px solid var(--ocre-fuerte);outline-offset:2px;border-radius:4px}
+
+/* ---------- utilidades ---------- */
+.eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinta-3);font-variant-numeric:tabular-nums;
+}
+.serif{font-family:var(--serif)}
+.oculto{display:none !important}
+.solo-lectores{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;border:0;
+}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- estructura ---------- */
+.cinta{height:4px;background:linear-gradient(90deg,var(--ocre-fuerte) 0 33.3%,var(--marca-2) 33.3% 66.6%,var(--mal) 66.6% 100%)}
+.encabezado{
+  background:var(--marca);color:var(--sobre-marca);
+  padding:18px 20px;
+}
+.encabezado-int{
+  max-width:1140px;margin:0 auto;display:flex;gap:16px;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;
+}
+.marca-bloque{display:flex;gap:12px;align-items:center;min-width:0}
+.escudo{
+  width:38px;height:38px;flex:none;border-radius:8px;background:rgba(255,255,255,.12);
+  display:grid;place-items:center;border:1px solid rgba(255,255,255,.22);
+}
+.escudo svg{width:22px;height:22px;display:block}
+.titulo-app{font-size:17px;font-weight:600;letter-spacing:-.015em}
+.subtitulo-app{font-size:12.5px;color:rgba(255,255,255,.72);letter-spacing:.02em}
+.acciones-enc{display:flex;gap:8px;align-items:center}
+.btn-enc{
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.24);
+  color:var(--sobre-marca);border-radius:99px;padding:7px 14px;font-size:13px;
+  font-weight:500;cursor:pointer;transition:background .15s ease;
+}
+.btn-enc:hover{background:rgba(255,255,255,.2)}
+
+main{padding:26px 20px 72px}
+.marco{max-width:680px;margin:0 auto}
+.marco-ancho{max-width:1140px;margin:0 auto}
+
+.pie{
+  border-top:1px solid var(--linea);padding:22px 20px 34px;color:var(--tinta-3);
+  font-size:12.5px;text-align:center;
+}
+.pie a{color:var(--tinta-2)}
+
+/* ---------- tarjetas ---------- */
+.tarjeta{
+  background:var(--sup);border:1px solid var(--linea);border-radius:var(--radio);
+  box-shadow:var(--sombra);padding:24px;
+}
+@media (max-width:520px){ .tarjeta{padding:18px} main{padding:18px 14px 60px} }
+
+/* ---------- portada ---------- */
+.portada{display:flex;flex-direction:column;gap:22px}
+.portada h1{font-size:clamp(26px,6vw,36px);letter-spacing:-.025em}
+.lead{font-family:var(--serif);font-size:17.5px;line-height:1.62;color:var(--tinta-2)}
+.datos-prueba{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;
+  background:var(--linea-2);border:1px solid var(--linea-2);border-radius:var(--radio-sm);
+  overflow:hidden;
+}
+.dato{background:var(--sup);padding:13px 15px}
+.dato dt{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--tinta-3);margin:0}
+.dato dd{margin:3px 0 0;font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+.temario{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
+.pastilla{
+  font-size:12.5px;padding:5px 11px;border-radius:99px;background:var(--marca-tenue);
+  color:var(--marca-2);border:1px solid transparent;font-weight:500;
+}
+
+/* ---------- formulario ---------- */
+.campos{display:grid;gap:14px}
+.campo{display:flex;flex-direction:column;gap:6px}
+.campo label{font-size:13.5px;font-weight:600;color:var(--tinta-2)}
+.campo .ayuda{font-size:12px;color:var(--tinta-3);font-weight:400}
+input[type=text],input[type=email],input[type=password],select,textarea{
+  font:inherit;font-size:16px;color:var(--tinta);background:var(--sup-2);
+  border:1px solid var(--linea);border-radius:var(--radio-sm);padding:11px 13px;
+  width:100%;transition:border-color .15s ease, background .15s ease;
+}
+input:focus,select:focus,textarea:focus{border-color:var(--marca-2);background:var(--sup);outline-offset:1px}
+textarea{min-height:110px;resize:vertical;font-family:var(--mono);font-size:13px;line-height:1.5}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--tinta-2)}
+.check input{width:20px;height:20px;flex:none;margin:1px 0 0;accent-color:var(--marca-2)}
+
+/* ---------- botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:46px;padding:12px 20px;border-radius:99px;border:1px solid transparent;
+  font-size:15px;font-weight:600;cursor:pointer;transition:transform .12s ease, background .15s ease, box-shadow .15s ease;
+  text-decoration:none;
+}
+.btn:active{transform:translateY(1px)}
+.btn-principal{background:var(--marca);color:var(--sobre-marca);box-shadow:var(--sombra)}
+.btn-principal:hover{background:var(--marca-2)}
+.btn-secundario{background:var(--sup);color:var(--tinta);border-color:var(--linea)}
+.btn-secundario:hover{background:var(--sup-2);border-color:var(--tinta-3)}
+.btn-plano{background:transparent;color:var(--marca-2);min-height:38px;padding:8px 12px;font-weight:600;font-size:14px;border-color:transparent}
+.btn-plano:hover{background:var(--marca-tenue)}
+.btn-peligro{background:var(--sup);color:var(--mal);border-color:var(--mal)}
+.btn-peligro:hover{background:var(--mal-tenue)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.btn-bloque{width:100%}
+.fila-btns{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ---------- progreso ---------- */
+.barra-progreso{
+  position:sticky;top:0;z-index:20;background:var(--papel);
+  padding:10px 0 12px;margin:-26px 0 16px;
+}
+.barra-progreso-int{display:flex;flex-direction:column;gap:7px}
+.riel{height:6px;border-radius:99px;background:var(--linea);overflow:hidden}
+.relleno{height:100%;width:0;background:var(--marca-2);border-radius:99px;transition:width .35s cubic-bezier(.22,1,.36,1)}
+.marcadores{display:flex;justify-content:space-between;font-size:12px;color:var(--tinta-3);font-variant-numeric:tabular-nums}
+
+/* ---------- pregunta ---------- */
+.pregunta{display:flex;flex-direction:column;gap:18px;animation:entra .3s cubic-bezier(.22,1,.36,1)}
+@keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cab-pregunta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.tema-tag{font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ocre)}
+.enunciado{font-family:var(--serif);font-size:19px;line-height:1.5;letter-spacing:-.005em}
+.contexto{
+  font-family:var(--serif);font-size:16px;line-height:1.55;color:var(--tinta-2);
+  border-left:3px solid var(--ocre-fuerte);padding:2px 0 2px 14px;
+}
+.opciones{display:flex;flex-direction:column;gap:10px}
+.opcion{
+  display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;
+  background:var(--sup);border:1.5px solid var(--linea);border-radius:var(--radio-sm);
+  padding:13px 15px;cursor:pointer;font-size:15.5px;line-height:1.45;
+  transition:border-color .15s ease, background .15s ease, transform .12s ease;
+}
+.opcion:hover:not(:disabled){border-color:var(--marca-2);background:var(--sup-2)}
+.opcion:disabled{cursor:default}
+.letra{
+  flex:none;width:26px;height:26px;border-radius:7px;background:var(--sup-2);
+  border:1px solid var(--linea);display:grid;place-items:center;font-size:13px;
+  font-weight:700;color:var(--tinta-2);margin-top:1px;
+}
+.opcion[aria-checked="true"]{border-color:var(--marca-2);background:var(--marca-tenue)}
+.opcion.acierto{border-color:var(--ok);background:var(--ok-tenue)}
+.opcion.acierto .letra{background:var(--ok);border-color:var(--ok);color:#fff}
+.opcion.fallo{border-color:var(--mal);background:var(--mal-tenue)}
+.opcion.fallo .letra{background:var(--mal);border-color:var(--mal);color:#fff}
+.opcion.atenuada{opacity:.62}
+
+.veredicto{
+  display:flex;flex-direction:column;gap:10px;border-radius:var(--radio-sm);
+  padding:15px 16px;border:1px solid var(--linea);background:var(--sup-2);
+  animation:entra .3s cubic-bezier(.22,1,.36,1);
+}
+.veredicto.bien{border-color:var(--ok);background:var(--ok-tenue)}
+.veredicto.mal{border-color:var(--mal);background:var(--mal-tenue)}
+.veredicto-cab{display:flex;gap:9px;align-items:center;font-weight:700;font-size:15px}
+.veredicto.bien .veredicto-cab{color:var(--ok)}
+.veredicto.mal .veredicto-cab{color:var(--mal)}
+.veredicto-cab svg{width:20px;height:20px;flex:none}
+.explicacion{font-family:var(--serif);font-size:15.5px;line-height:1.6;color:var(--tinta)}
+.explicacion strong{font-weight:600}
+.norma{
+  font-size:12.5px;color:var(--tinta-2);border-top:1px dashed var(--linea);
+  padding-top:9px;letter-spacing:.01em;
+}
+.norma b{font-weight:600;color:var(--tinta)}
+
+/* ---------- resultado ---------- */
+.marcador{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.aro{position:relative;width:118px;height:118px;flex:none}
+.aro svg{transform:rotate(-90deg);width:100%;height:100%}
+.aro-txt{
+  position:absolute;inset:0;display:grid;place-items:center;text-align:center;line-height:1.05;
+}
+.aro-num{font-size:31px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.aro-sub{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-3);font-weight:600}
+.nivel{font-size:21px;font-weight:600;letter-spacing:-.02em}
+.resumen-tema{display:grid;gap:9px}
+.fila-tema{display:grid;grid-template-columns:1fr 68px;gap:12px;align-items:center;font-size:14px}
+.mini-riel{display:block;height:7px;border-radius:99px;background:var(--linea);overflow:hidden;grid-column:1/-1;margin-top:-4px}
+.mini-relleno{display:block;height:100%;background:var(--marca-2);border-radius:99px}
+.revision{display:flex;flex-direction:column;gap:12px}
+.item-rev{
+  border:1px solid var(--linea);border-radius:var(--radio-sm);background:var(--sup);
+  overflow:hidden;
+}
+.item-rev>summary{
+  cursor:pointer;padding:13px 15px;display:flex;gap:11px;align-items:flex-start;
+  font-size:14.5px;line-height:1.4;list-style:none;
+}
+.item-rev>summary::-webkit-details-marker{display:none}
+.marca-rev{
+  flex:none;width:24px;height:24px;border-radius:7px;display:grid;place-items:center;
+  font-size:12px;font-weight:700;color:#fff;
+}
+.marca-rev.bien{background:var(--ok)}
+.marca-rev.mal{background:var(--mal)}
+.cuerpo-rev{padding:0 15px 15px;display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--linea-2);padding-top:13px}
+.codigo-caja{
+  font-family:var(--mono);font-size:12px;line-height:1.5;word-break:break-all;
+  background:var(--sup-2);border:1px dashed var(--linea);border-radius:var(--radio-sm);
+  padding:12px;color:var(--tinta-2);max-height:150px;overflow:auto;
+}
+
+/* ---------- avisos ---------- */
+.aviso{
+  display:flex;gap:11px;align-items:flex-start;font-size:13.5px;line-height:1.5;
+  border-radius:var(--radio-sm);padding:12px 14px;border:1px solid var(--linea);
+  background:var(--sup-2);color:var(--tinta-2);
+}
+.aviso.ocre{background:var(--ocre-tenue);border-color:var(--ocre-fuerte);color:var(--tinta)}
+.aviso.malo{background:var(--mal-tenue);border-color:var(--mal);color:var(--tinta)}
+.aviso.bueno{background:var(--ok-tenue);border-color:var(--ok);color:var(--tinta)}
+.aviso svg{width:18px;height:18px;flex:none;margin-top:1px}
+
+/* ---------- panel admin ---------- */
+.rejilla-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{background:var(--sup);border:1px solid var(--linea);border-radius:var(--radio);padding:16px 17px;box-shadow:var(--sombra)}
+.kpi-val{font-size:29px;font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.1}
+.kpi-eti{font-size:11.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--tinta-3);margin-top:4px}
+.kpi-nota{font-size:12.5px;color:var(--tinta-2);margin-top:6px}
+.rejilla-graficas{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;align-items:start}
+.panel-grafica{background:var(--sup);border:1px solid var(--linea);border-radius:var(--radio);padding:18px;box-shadow:var(--sombra);display:flex;flex-direction:column;gap:14px}
+.panel-grafica h3{font-size:15.5px}
+.panel-grafica .sub{font-size:12.5px;color:var(--tinta-3);margin-top:2px}
+.lienzo{width:100%;overflow-x:auto}
+.lienzo svg{display:block;width:100%;height:auto;min-width:280px}
+.leyenda{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--tinta-2)}
+.punto{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+
+.tabla-envolt{overflow-x:auto;border:1px solid var(--linea);border-radius:var(--radio);background:var(--sup)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:620px}
+thead th{
+  text-align:left;font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--tinta-3);
+  font-weight:600;padding:11px 13px;border-bottom:1px solid var(--linea);white-space:nowrap;
+  background:var(--sup-2);position:sticky;top:0;
+}
+tbody td{padding:11px 13px;border-bottom:1px solid var(--linea-2);vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--sup-2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:99px;white-space:nowrap}
+.chip.alto{background:var(--ok-tenue);color:var(--ok)}
+.chip.medio{background:var(--ocre-tenue);color:var(--ocre)}
+.chip.bajo{background:var(--mal-tenue);color:var(--mal)}
+.barra-celda{height:6px;border-radius:99px;background:var(--linea);overflow:hidden;margin-top:5px;min-width:70px}
+.barra-celda i{display:block;height:100%;border-radius:99px;background:var(--marca-2)}
+
+.pestanas{display:flex;gap:4px;border-bottom:1px solid var(--linea);overflow-x:auto}
+.pestana{
+  background:transparent;border:0;border-bottom:2px solid transparent;padding:10px 14px;
+  font-size:14px;font-weight:600;color:var(--tinta-3);cursor:pointer;white-space:nowrap;
+}
+.pestana[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--ocre-fuerte)}
+.pestana:hover{color:var(--tinta)}
+
+.seccion{display:flex;flex-direction:column;gap:16px}
+.cab-seccion{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap}
+.cab-seccion h2{font-size:20px;letter-spacing:-.02em}
+.cab-seccion p{font-size:13.5px;color:var(--tinta-2);margin-top:3px}
+
+details.guia{border:1px solid var(--linea);border-radius:var(--radio-sm);background:var(--sup-2);padding:0}
+details.guia>summary{cursor:pointer;padding:13px 15px;font-size:14px;font-weight:600;list-style:none;display:flex;gap:9px;align-items:center}
+details.guia>summary::-webkit-details-marker{display:none}
+details.guia>summary::before{content:"+";font-weight:700;color:var(--ocre);width:14px;display:inline-block}
+details.guia[open]>summary::before{content:"–"}
+.guia-cuerpo{padding:0 15px 15px;display:flex;flex-direction:column;gap:11px;font-size:13.5px;line-height:1.55;color:var(--tinta-2)}
+.guia-cuerpo ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px}
+
+.vacio{text-align:center;padding:44px 20px;color:var(--tinta-3);display:flex;flex-direction:column;gap:8px;align-items:center}
+.vacio strong{font-size:16px;color:var(--tinta-2);font-weight:600}
+
+.brindis{
+  position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(140%);
+  visibility:hidden;pointer-events:none;
+  background:var(--tinta);color:var(--papel);padding:12px 20px;border-radius:99px;
+  font-size:14px;font-weight:500;box-shadow:var(--sombra-alta);z-index:60;
+  transition:transform .3s cubic-bezier(.22,1,.36,1);max-width:calc(100vw - 32px);text-align:center;
+}
+.brindis.visible{transform:translateX(-50%) translateY(0);visibility:visible}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
+@media print{
+  .encabezado,.pie,.acciones-enc,.fila-btns,.barra-progreso{display:none !important}
+  body{background:#fff}
+  .tarjeta,.panel-grafica,.kpi{box-shadow:none;border-color:#bbb}
+}
+</style>
+</head>
+<body>
+<div class="cinta" aria-hidden="true"></div>
+
+<header class="encabezado">
+  <div class="encabezado-int">
+    <div class="marca-bloque">
+      <span class="escudo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 21h18M5 21V10m4 11V10m6 11V10m4 11V10M2.5 10 12 4l9.5 6"/>
+        </svg>
+      </span>
+      <div>
+        <div class="titulo-app">Prueba del Estado Colombiano</div>
+        <div class="subtitulo-app">Formación de líderes sociales para la administración pública</div>
+      </div>
+    </div>
+    <div class="acciones-enc">
+      <button class="btn-enc" id="btn-tema" type="button" aria-label="Cambiar entre tema claro y oscuro">Tema</button>
+      <button class="btn-enc" id="btn-panel" type="button">Panel</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ PORTADA ============================ -->
+<section class="marco vista" id="vista-inicio">
+  <div class="tarjeta portada">
+    <div>
+      <p class="eyebrow">Evaluación diagnóstica · Nivel alto</p>
+      <h1>Diez preguntas sobre cómo funciona realmente el Estado</h1>
+    </div>
+    <p class="lead">
+      Esta prueba no se aprueba con memoria. Cada pregunta plantea una situación concreta
+      —un contrato a tres años, una partida que alguien quiere aumentar en el Congreso, un
+      proyecto comunitario que busca presupuesto— y le pide decidir qué dice la norma y por qué.
+      Al responder verá de inmediato si acertó, junto con el fundamento constitucional o legal.
+    </p>
+
+    <dl class="datos-prueba">
+      <div class="dato"><dt>Preguntas</dt><dd class="num">10</dd></div>
+      <div class="dato"><dt>Duración</dt><dd>25–35 min</dd></div>
+      <div class="dato"><dt>Dificultad</dt><dd>Alta</dd></div>
+      <div class="dato"><dt>Intentos</dt><dd>Ilimitados</dd></div>
+    </dl>
+
+    <div>
+      <p class="eyebrow" style="margin-bottom:9px">Lo que se evalúa</p>
+      <ul class="temario" id="lista-temas"></ul>
+    </div>
+
+    <form class="campos" id="form-inicio" novalidate>
+      <div class="campo">
+        <label for="f-nombre">Nombre completo <span class="ayuda">(obligatorio)</span></label>
+        <input type="text" id="f-nombre" name="nombre" autocomplete="name" required maxlength="90" placeholder="Ej.: María Fernanda Ospina">
+      </div>
+      <div class="campo">
+        <label for="f-org">Organización o proceso social <span class="ayuda">(obligatorio)</span></label>
+        <input type="text" id="f-org" name="organizacion" autocomplete="organization" required maxlength="90" placeholder="Ej.: Junta de Acción Comunal La Esperanza">
+      </div>
+      <div class="campo">
+        <label for="f-mun">Municipio y departamento <span class="ayuda">(obligatorio)</span></label>
+        <input type="text" id="f-mun" name="municipio" required maxlength="90" placeholder="Ej.: Apartadó, Antioquia">
+      </div>
+      <div class="campo">
+        <label for="f-correo">Correo electrónico <span class="ayuda">(opcional, para recibir retroalimentación)</span></label>
+        <input type="email" id="f-correo" name="correo" autocomplete="email" maxlength="120" placeholder="nombre@correo.com">
+      </div>
+      <label class="check">
+        <input type="checkbox" id="f-consent" required>
+        <span>Autorizo que mis respuestas y mi puntaje se registren para el análisis pedagógico del proceso de formación.</span>
+      </label>
+      <div id="error-inicio" class="aviso malo oculto" role="alert"></div>
+      <button class="btn btn-principal btn-bloque" type="submit">Comenzar la prueba</button>
+    </form>
+
+    <p style="font-size:12.5px;color:var(--tinta-3)">
+      Sus datos se guardan en este dispositivo y, si la coordinación configuró un repositorio central,
+      también se envían allí. No se comparten con terceros.
+    </p>
+  </div>
+</section>
+
+<!-- ============================ PRUEBA ============================ -->
+<section class="marco vista oculto" id="vista-test">
+  <div class="barra-progreso">
+    <div class="barra-progreso-int">
+      <div class="marcadores">
+        <span id="prog-texto">Pregunta 1 de 10</span>
+        <span id="prog-aciertos" class="num">0 aciertos</span>
+      </div>
+      <div class="riel" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Avance de la prueba" id="riel">
+        <div class="relleno" id="relleno"></div>
+      </div>
+    </div>
+  </div>
+  <div class="tarjeta">
+    <div class="pregunta" id="lienzo-pregunta"></div>
+  </div>
+</section>
+
+<!-- ============================ RESULTADO ============================ -->
+<section class="marco vista oculto" id="vista-resultado">
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div class="tarjeta" style="display:flex;flex-direction:column;gap:20px">
+      <div>
+        <p class="eyebrow">Resultado de la prueba</p>
+        <h1 style="font-size:clamp(23px,5.4vw,30px)" id="res-saludo">Resultado</h1>
+      </div>
+      <div class="marcador">
+        <div class="aro" id="aro"></div>
+        <div style="display:flex;flex-direction:column;gap:5px;min-width:190px;flex:1">
+          <div class="nivel" id="res-nivel"></div>
+          <p style="font-size:14.5px;color:var(--tinta-2)" id="res-mensaje"></p>
+          <p class="eyebrow" id="res-meta"></p>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:10px">Desempeño por tema</p>
+        <div class="resumen-tema" id="res-temas"></div>
+      </div>
+      <div id="res-envio"></div>
+      <div class="fila-btns">
+        <button class="btn btn-principal" id="btn-descargar-mio" type="button">Descargar mi resultado</button>
+        <button class="btn btn-secundario" id="btn-copiar-codigo" type="button">Copiar código de resultado</button>
+        <button class="btn btn-secundario" id="btn-reiniciar" type="button">Presentar de nuevo</button>
+      </div>
+      <details class="guia">
+        <summary>Ver mi código de resultado</summary>
+        <div class="guia-cuerpo">
+          <p>Si la coordinación no tiene repositorio central configurado, copie este código y envíelo
+             por el canal que le indiquen. Contiene únicamente sus datos y sus respuestas.</p>
+          <div class="codigo-caja" id="codigo-resultado"></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="tarjeta" style="display:flex;flex-direction:column;gap:16px">
+      <div>
+        <p class="eyebrow">Revisión pregunta por pregunta</p>
+        <h2 style="font-size:19px;margin-top:4px">Qué dice la norma en cada caso</h2>
+      </div>
+      <div class="revision" id="res-revision"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PANEL ADMIN ============================ -->
+<section class="marco vista oculto" id="vista-login">
+  <div class="tarjeta" style="display:flex;flex-direction:column;gap:18px">
+    <div>
+      <p class="eyebrow">Acceso restringido</p>
+      <h1 style="font-size:25px;margin-top:4px">Panel de la coordinación</h1>
+      <p style="font-size:14.5px;color:var(--tinta-2);margin-top:8px">
+        Consulte los resultados de todas las personas participantes, las gráficas de desempeño y la
+        exportación de datos.
+      </p>
+    </div>
+    <form class="campos" id="form-login" novalidate>
+      <div class="campo">
+        <label for="f-pass">Contraseña</label>
+        <input type="password" id="f-pass" autocomplete="current-password" required>
+      </div>
+      <div id="error-login" class="aviso malo oculto" role="alert"></div>
+      <button class="btn btn-principal btn-bloque" type="submit">Entrar</button>
+      <button class="btn btn-plano btn-bloque" type="button" id="btn-volver-inicio">Volver a la prueba</button>
+    </form>
+    <div class="aviso ocre">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+      <span>Contraseña inicial: <b>estado2026</b>. Cámbiela desde la pestaña «Configuración» apenas entre.
+        Al ser una página sin servidor, esta clave es una barrera de conveniencia, no un control de seguridad fuerte.</span>
+    </div>
+  </div>
+</section>
+
+<section class="marco-ancho vista oculto" id="vista-admin">
+  <div class="seccion">
+    <div class="cab-seccion">
+      <div>
+        <p class="eyebrow">Panel de la coordinación</p>
+        <h2>Resultados y analítica</h2>
+        <p id="admin-sub">Sin registros todavía.</p>
+      </div>
+      <div class="fila-btns">
+        <button class="btn btn-secundario" id="btn-sincronizar" type="button">Sincronizar</button>
+        <button class="btn btn-plano" id="btn-salir" type="button">Cerrar sesión</button>
+      </div>
+    </div>
+
+    <div class="pestanas" role="tablist" aria-label="Secciones del panel">
+      <button class="pestana" role="tab" id="tab-resumen" aria-controls="p-resumen" aria-selected="true">Resumen y gráficas</button>
+      <button class="pestana" role="tab" id="tab-participantes" aria-controls="p-participantes" aria-selected="false">Participantes</button>
+      <button class="pestana" role="tab" id="tab-preguntas" aria-controls="p-preguntas" aria-selected="false">Preguntas</button>
+      <button class="pestana" role="tab" id="tab-config" aria-controls="p-config" aria-selected="false">Configuración</button>
+    </div>
+
+    <div id="p-resumen" role="tabpanel" aria-labelledby="tab-resumen" class="seccion">
+      <div class="rejilla-kpi" id="kpis"></div>
+      <div class="rejilla-graficas" id="graficas"></div>
+    </div>
+
+    <div id="p-participantes" role="tabpanel" aria-labelledby="tab-participantes" class="seccion oculto">
+      <div class="cab-seccion">
+        <div>
+          <h3 style="font-size:17px">Registros individuales</h3>
+          <p>Cada fila es un intento. Toque una fila para ver el detalle de sus respuestas.</p>
+        </div>
+        <div class="fila-btns">
+          <button class="btn btn-secundario" id="btn-csv" type="button">Exportar CSV</button>
+          <button class="btn btn-secundario" id="btn-json" type="button">Exportar JSON</button>
+        </div>
+      </div>
+      <div class="campo" style="max-width:340px">
+        <label for="f-buscar" class="solo-lectores">Buscar participante</label>
+        <input type="text" id="f-buscar" placeholder="Buscar por nombre, organización o municipio">
+      </div>
+      <div class="tabla-envolt" id="tabla-participantes"></div>
+      <div id="detalle-participante"></div>
+    </div>
+
+    <div id="p-preguntas" role="tabpanel" aria-labelledby="tab-preguntas" class="seccion oculto">
+      <div class="cab-seccion">
+        <div>
+          <h3 style="font-size:17px">Dificultad por pregunta</h3>
+          <p>Ordenadas de la más difícil a la más fácil, con la opción incorrecta que más se eligió.</p>
+        </div>
+      </div>
+      <div class="tabla-envolt" id="tabla-preguntas"></div>
+    </div>
+
+    <div id="p-config" role="tabpanel" aria-labelledby="tab-config" class="seccion oculto">
+      <div class="rejilla-graficas">
+        <div class="panel-grafica">
+          <h3>Repositorio central de respuestas</h3>
+          <p class="sub">Sin esta configuración, cada resultado queda solo en el dispositivo de quien responde.
+             Con ella, todos los resultados llegan a una hoja de cálculo suya.</p>
+          <div class="campo">
+            <label for="f-endpoint">URL del servicio (Google Apps Script u otro)</label>
+            <input type="text" id="f-endpoint" placeholder="https://script.google.com/macros/s/…/exec">
+          </div>
+          <div class="campo">
+            <label for="f-clave-api">Clave compartida <span class="ayuda">(la misma del script)</span></label>
+            <input type="text" id="f-clave-api" placeholder="clave-larga-y-dificil">
+          </div>
+          <div class="fila-btns">
+            <button class="btn btn-principal" id="btn-guardar-endpoint" type="button">Guardar</button>
+            <button class="btn btn-secundario" id="btn-probar-endpoint" type="button">Probar conexión</button>
+          </div>
+          <div id="estado-endpoint"></div>
+          <details class="guia">
+            <summary>Cómo crear el repositorio en 5 minutos (gratis)</summary>
+            <div class="guia-cuerpo">
+              <ol>
+                <li>Cree una hoja nueva en Google Sheets.</li>
+                <li>Menú <b>Extensiones → Apps Script</b>. Borre lo que haya y pegue el código de abajo.</li>
+                <li>Cambie <code>CLAVE</code> por una clave propia.</li>
+                <li><b>Implementar → Nueva implementación → Aplicación web</b>. Ejecutar como <b>yo</b>, con acceso para <b>cualquier persona</b>.</li>
+                <li>Copie la URL que termina en <code>/exec</code> y péguela arriba junto con la clave.</li>
+              </ol>
+              <div class="fila-btns">
+                <button class="btn btn-secundario" id="btn-copiar-script" type="button">Copiar el código</button>
+              </div>
+              <div class="codigo-caja" id="script-apps" style="max-height:230px"></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="panel-grafica">
+          <h3>Seguridad y datos</h3>
+          <p class="sub">Contraseña del panel, importación manual y limpieza de registros.</p>
+          <div class="campo">
+            <label for="f-nueva-pass">Nueva contraseña del panel</label>
+            <input type="password" id="f-nueva-pass" autocomplete="new-password" placeholder="Mínimo 8 caracteres">
+          </div>
+          <div class="fila-btns">
+            <button class="btn btn-principal" id="btn-cambiar-pass" type="button">Cambiar contraseña</button>
+          </div>
+          <div id="estado-pass"></div>
+          <hr style="border:0;border-top:1px solid var(--linea);margin:4px 0">
+          <div class="campo">
+            <label for="f-importar">Importar códigos de resultado</label>
+            <span class="ayuda">Pegue uno o varios códigos, uno por línea, o el contenido de un archivo JSON exportado.</span>
+            <textarea id="f-importar" placeholder="PEC1:eyJuIjoiTWFyw61hIiwi…"></textarea>
+          </div>
+          <div class="fila-btns">
+            <button class="btn btn-principal" id="btn-importar" type="button">Importar</button>
+            <button class="btn btn-secundario" id="btn-archivo" type="button">Cargar archivo…</button>
+            <input type="file" id="f-archivo" accept=".json,.txt" class="oculto">
+          </div>
+          <div id="estado-importar"></div>
+          <hr style="border:0;border-top:1px solid var(--linea);margin:4px 0">
+          <div class="fila-btns">
+            <button class="btn btn-secundario" id="btn-copiar-enlace" type="button">Copiar enlace para compartir</button>
+            <button class="btn btn-peligro" id="btn-borrar" type="button">Borrar todos los registros</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <p>Prueba del Estado Colombiano · Material de formación para liderazgos sociales.<br>
+     Fundamentos: Constitución Política de 1991, Decreto 111 de 1996, Ley 152 de 1994,
+     Ley 489 de 1998, Ley 715 de 2001, Ley 819 de 2003, Ley 850 de 2003, Ley 1150 de 2007,
+     Ley 1483 de 2011, Ley 1757 de 2015 y Ley 2056 de 2020.</p>
+</footer>
+
+<div class="brindis" id="brindis" role="status" aria-live="polite"></div>
+<script>
+"use strict";
+
+/* ============================================================
+   1. BANCO DE PREGUNTAS
+   Cada pregunta: situación concreta + 4 opciones + explicación
+   con el fundamento normativo. La respuesta correcta es el
+   índice indicado en "correcta" sobre el arreglo original.
+   ============================================================ */
+const PREGUNTAS = [
+  {
+    id: "q01",
+    tema: "Estructura del Estado",
+    contexto: "En una mesa de trabajo del plan de desarrollo, un asistente afirma: «todo organismo público pertenece necesariamente a alguna de las tres ramas del poder; por eso la Contraloría y la Procuraduría dependen del Congreso».",
+    enunciado: "¿Cuál es la respuesta jurídicamente correcta según el artículo 113 de la Constitución?",
+    opciones: [
+      "Es correcto: los órganos de control hacen parte de la rama legislativa, porque el control fiscal y el disciplinario son formas de control político.",
+      "Es incorrecto: además de las tres ramas existen otros órganos autónomos e independientes, encargados de las demás funciones del Estado, que colaboran armónicamente con ellas.",
+      "Es correcto en general, con la única excepción del Banco de la República, que es el único órgano ubicado por fuera de las tres ramas.",
+      "Es incorrecto: los órganos de control pertenecen a la rama judicial, porque investigan conductas e imponen sanciones."
+    ],
+    correcta: 1,
+    explicacion: "El artículo 113 dice que son ramas del poder público la legislativa, la ejecutiva y la judicial, y que «además de los órganos que las integran existen otros, autónomos e independientes, para el cumplimiento de las demás funciones del Estado». Ahí están el Ministerio Público (Procuraduría, Defensoría del Pueblo y personerías), la Contraloría General de la República, la Organización Electoral (Consejo Nacional Electoral y Registraduría), el Banco de la República, la Comisión Nacional del Servicio Civil y los entes universitarios autónomos, entre otros. Dos precisiones que suelen confundirse: el control político lo ejerce el Congreso sobre el Gobierno; el control fiscal lo ejerce la Contraloría y no es político. Y aunque la Contraloría y el Procurador son elegidos con intervención del Congreso, eso no los convierte en parte de la rama legislativa.",
+    norma: "Constitución Política, arts. 113, 117, 118, 119, 267, 275 y 371."
+  },
+  {
+    id: "q02",
+    tema: "Presupuesto público",
+    contexto: "Usted revisa la ley anual de presupuesto para hacer control social a la inversión de su municipio y necesita entender cómo está organizado el documento.",
+    enunciado: "Según el Estatuto Orgánico del Presupuesto, ¿cuáles son las tres partes que componen el Presupuesto General de la Nación?",
+    opciones: [
+      "Presupuesto de rentas, presupuesto de gastos o ley de apropiaciones, y disposiciones generales.",
+      "Ingresos corrientes, recursos de capital y transferencias de la Nación.",
+      "Gastos de funcionamiento, servicio de la deuda pública y gastos de inversión.",
+      "Presupuesto General de la Nación, Sistema General de Participaciones y Sistema General de Regalías."
+    ],
+    correcta: 0,
+    explicacion: "El Presupuesto General de la Nación se compone de tres partes: el <strong>presupuesto de rentas</strong> (ingresos corrientes, contribuciones parafiscales, fondos especiales, recursos de capital y rentas de establecimientos públicos), el <strong>presupuesto de gastos o ley de apropiaciones</strong> y las <strong>disposiciones generales</strong>, que son las normas para ejecutar el presupuesto y solo rigen durante el año fiscal. Las otras opciones describen clasificaciones internas: los ingresos corrientes y los recursos de capital son categorías <em>dentro</em> del presupuesto de rentas; funcionamiento, deuda e inversión son las categorías <em>dentro</em> del presupuesto de gastos. Y el Sistema General de Regalías no hace parte del PGN: tiene su propio presupuesto bienal.",
+    norma: "Decreto 111 de 1996 (Estatuto Orgánico del Presupuesto), arts. 11, 27 y 36; Constitución Política, art. 347."
+  },
+  {
+    id: "q03",
+    tema: "Presupuesto público",
+    contexto: "Durante el trámite de la ley anual de presupuesto, un congresista aliado de su proceso propone aumentar en 30.000 millones la partida de inversión de un ministerio y crear una partida nueva para un programa de vivienda rural.",
+    enunciado: "¿Qué establece la Constitución frente a esa propuesta?",
+    opciones: [
+      "El Congreso puede aumentar partidas y crear otras nuevas libremente, porque tiene la última palabra en materia presupuestal.",
+      "Puede aumentar partidas existentes, pero crear una nueva requiere concepto previo favorable del Consejo de Estado.",
+      "El Congreso no puede aumentar ninguna partida del presupuesto de gastos propuesta por el Gobierno, ni incluir una nueva, sino con la aceptación escrita del ministro del ramo.",
+      "Puede hacer ambas cosas si la comisión de conciliación lo aprueba por mayoría calificada, sin intervención del Gobierno."
+    ],
+    correcta: 2,
+    explicacion: "El artículo 351 es tajante: «El Congreso no podrá aumentar ninguna de las partidas del presupuesto de gastos propuestas por el Gobierno, ni incluir una nueva, sino con la aceptación escrita del ministro del ramo». El Congreso sí puede <strong>eliminar o reducir</strong> partidas, salvo las que correspondan a créditos judicialmente reconocidos, al servicio de la deuda, a gasto decretado conforme a ley anterior o a las destinadas a dar cumplimiento al Plan Nacional de Desarrollo. Esto refleja el principio de que <strong>la iniciativa del gasto es del Gobierno</strong>: es él quien presenta el proyecto de presupuesto (art. 346). Consecuencia práctica para el control social: la incidencia real se juega antes, en la formulación del anteproyecto y del Marco de Gasto de Mediano Plazo, no en el debate final.",
+    norma: "Constitución Política, arts. 346, 349 y 351; Decreto 111 de 1996, arts. 62 y 63."
+  },
+  {
+    id: "q04",
+    tema: "Presupuesto público",
+    contexto: "Una plataforma de organizaciones impulsa un proyecto de ley para que un porcentaje fijo del recaudo del impuesto de renta se destine de manera permanente a financiar los gastos de funcionamiento de un nuevo instituto nacional.",
+    enunciado: "¿Cuál es el principal obstáculo constitucional de esa propuesta?",
+    opciones: [
+      "Ninguno: basta con la mayoría simple en ambas cámaras, porque se trata de una ley ordinaria.",
+      "El artículo 359 prohíbe las rentas nacionales de destinación específica, salvo las participaciones de las entidades territoriales, las destinadas a inversión social y las de las antiguas intendencias y comisarías; unos gastos de funcionamiento no encajan en ninguna excepción.",
+      "Solo se requiere el aval del Ministerio de Hacienda, ya que el principio de unidad de caja se puede levantar por vía administrativa.",
+      "La prohibición de rentas de destinación específica aplica únicamente a los tributos de departamentos y municipios, no a los del nivel nacional."
+    ],
+    correcta: 1,
+    explicacion: "El artículo 359 prohíbe las rentas nacionales de destinación específica y admite solo tres excepciones: las participaciones previstas a favor de los departamentos, distritos y municipios; las destinadas a <strong>inversión social</strong>; y las que se destinen a las antiguas intendencias y comisarías. Financiar gastos de funcionamiento no cabe en ninguna. Detrás está el principio de <strong>unidad de caja</strong>: los recaudos ingresan a un fondo común con el que se atiende el pago oportuno de las apropiaciones. Ojo con la última opción: es exactamente al revés, porque las entidades territoriales sí pueden crear rentas de destinación específica sobre sus propios tributos. Y note que si el proyecto se hubiera formulado como inversión social (vivienda, educación, salud, agua potable) la respuesta cambiaría.",
+    norma: "Constitución Política, arts. 359 y 362; Decreto 111 de 1996, art. 16 (unidad de caja)."
+  },
+  {
+    id: "q05",
+    tema: "Recursos y descentralización",
+    contexto: "Su municipio, de sexta categoría y productor de carbón, recibe recursos del Sistema General de Participaciones y también del Sistema General de Regalías. En una asamblea comunitaria alguien propone usar regalías para pagar la nómina de la alcaldía.",
+    enunciado: "¿Cuál afirmación describe correctamente la diferencia entre los dos sistemas?",
+    opciones: [
+      "Ambos provienen de la explotación de recursos naturales no renovables y se giran directamente a las alcaldías sin destinación definida.",
+      "El SGP se distribuye por proyectos aprobados en los OCAD y el SGR se gira por fórmula según población atendida.",
+      "El SGP proviene de los ingresos corrientes de la Nación, se incorpora al presupuesto anual del municipio y tiene destinación sectorial; el SGR proviene de las regalías, se programa en un presupuesto bienal propio y se ejecuta mediante proyectos de inversión.",
+      "Son el mismo sistema con dos nombres: el SGR reemplazó al SGP a partir del Acto Legislativo 05 de 2011."
+    ],
+    correcta: 2,
+    explicacion: "Son dos fuentes distintas con reglas distintas. El <strong>SGP</strong> son los recursos que la Nación transfiere a las entidades territoriales tomados de sus ingresos corrientes; se distribuyen por fórmula y tienen destinación sectorial: educación, salud, agua potable y saneamiento básico, propósito general y asignaciones especiales. El <strong>SGR</strong> se nutre de la contraprestación por explotar recursos naturales no renovables; no entra al presupuesto ordinario del municipio sino que se programa en un <strong>presupuesto bienal propio</strong> aprobado por ley, y se ejecuta a través de proyectos de inversión con requisitos de viabilidad. Por eso la propuesta de la asamblea no procede: las regalías financian inversión, y solo porcentajes acotados y expresamente autorizados pueden ir a funcionamiento u operación del sistema.",
+    norma: "Constitución Política, arts. 356, 357, 360 y 361; Ley 715 de 2001 y Ley 1176 de 2007 (SGP); Acto Legislativo 05 de 2011 y Ley 2056 de 2020 (SGR)."
+  },
+  {
+    id: "q06",
+    tema: "Presupuesto público",
+    contexto: "En 2026 la alcaldía quiere contratar la construcción de un acueducto veredal cuya ejecución y cuyos pagos se extienden hasta 2028. El secretario de Hacienda advierte que el presupuesto es anual.",
+    enunciado: "¿Qué se requiere para poder comprometer recursos de vigencias posteriores?",
+    opciones: [
+      "Basta la firma del alcalde como ordenador del gasto, porque la anualidad solo aplica al recaudo, no al gasto.",
+      "Autorización previa del Concejo Municipal para comprometer vigencias futuras, con aval del CONFIS territorial y consistencia con el Marco Fiscal de Mediano Plazo y el Plan de Desarrollo.",
+      "Concepto previo favorable del Ministerio de Hacienda y del Departamento Nacional de Planeación para cualquier municipio.",
+      "No es posible: el principio de anualidad prohíbe que las entidades territoriales celebren contratos que superen la vigencia fiscal."
+    ],
+    correcta: 1,
+    explicacion: "El principio de anualidad no impide contratar a varios años: para eso existen las <strong>vigencias futuras</strong>. En las entidades territoriales las autoriza la asamblea o el concejo, previa aprobación del CONFIS territorial (o de quien haga sus veces), y deben ser consistentes con el Marco Fiscal de Mediano Plazo y con las metas del Plan de Desarrollo. Otros dos requisitos que suelen olvidarse: en las vigencias futuras ordinarias debe existir apropiación de al menos el <strong>15 %</strong> en la vigencia en que se autorizan, y por regla general no pueden autorizarse en el último año de gobierno, salvo las excepciones que la propia ley contempla. Comprometer recursos de años siguientes sin esa autorización es una de las causas más frecuentes de hallazgos fiscales y disciplinarios.",
+    norma: "Ley 819 de 2003, arts. 10 a 12; Ley 1483 de 2011, art. 1; Decreto 111 de 1996, art. 14 (anualidad)."
+  },
+  {
+    id: "q07",
+    tema: "Planeación e inversión",
+    contexto: "Su organización quiere que la alcaldía financie un centro comunitario. Un funcionario les dice que «radiquen un derecho de petición pidiendo la plata».",
+    enunciado: "¿Cuál es la ruta técnica correcta para que esa iniciativa pueda llegar al presupuesto de inversión?",
+    opciones: [
+      "Radicar un derecho de petición solicitando la adición presupuestal, ya que la administración está obligada a responder de fondo y a asignar los recursos.",
+      "Presentar el proyecto directamente al Departamento Nacional de Planeación, única entidad competente para viabilizar proyectos de inversión pública.",
+      "Esperar la audiencia pública de rendición de cuentas y proponerlo allí, porque es el único escenario donde la comunidad puede incidir en el presupuesto.",
+      "Formular el proyecto en la Metodología General Ajustada, registrarlo y obtener su viabilidad en el banco de programas y proyectos de la entidad, verificando que responda a una meta del Plan de Desarrollo, para que pueda incorporarse al Plan Operativo Anual de Inversiones y al presupuesto."
+    ],
+    correcta: 3,
+    explicacion: "Ningún programa o proyecto puede ejecutarse con cargo al presupuesto de inversión si no ha sido evaluado por el órgano competente y <strong>registrado en el banco de programas y proyectos</strong>. La cadena es: formulación en la <strong>MGA</strong> → registro y viabilidad en el banco de proyectos de la entidad → coherencia con una meta del Plan de Desarrollo y con el Plan Plurianual de Inversiones → inclusión en el <strong>POAI</strong> que prepara la oficina de planeación → apropiación en el presupuesto aprobado por el concejo. El derecho de petición sirve para exigir información y respuesta de fondo, pero no crea apropiaciones; la rendición de cuentas es un escenario de control, no de decisión presupuestal. Saber esto cambia la estrategia de incidencia: hay que llegar con el proyecto formulado antes de que se cierre el anteproyecto de presupuesto.",
+    norma: "Decreto 111 de 1996, art. 68; Ley 152 de 1994 (planes de desarrollo y bancos de proyectos); Ley 1755 de 2015 (derecho de petición)."
+  },
+  {
+    id: "q08",
+    tema: "Control y responsabilidad",
+    contexto: "Un alcalde celebró un contrato de obra sin estudios previos y con un anticipo elevado. La obra quedó inconclusa y se perdieron 800 millones de pesos de recursos públicos.",
+    enunciado: "¿Cómo operan las distintas responsabilidades que pueden derivarse del caso?",
+    opciones: [
+      "Los tres procesos —fiscal ante la Contraloría, disciplinario ante la Procuraduría o el control interno disciplinario, y penal ante la Fiscalía— son autónomos e independientes y pueden adelantarse de manera simultánea.",
+      "Solo procede el proceso fiscal ante la Contraloría; las demás actuaciones dependen de que el fallo de responsabilidad fiscal quede en firme.",
+      "Debe agotarse primero el proceso penal, y los procesos fiscal y disciplinario quedan suspendidos por prejudicialidad hasta la sentencia.",
+      "Al tratarse de un funcionario de elección popular, solo puede investigarlo la Procuraduría, y únicamente después de que termine su periodo."
+    ],
+    correcta: 0,
+    explicacion: "Cada responsabilidad protege un bien jurídico distinto y por eso corren en paralelo. La <strong>fiscal</strong> es de naturaleza resarcitoria: busca reparar el daño patrimonial al Estado y termina en un fallo con responsabilidad que ordena pagar; la adelanta la Contraloría y es autónoma e independiente de las demás. La <strong>disciplinaria</strong> juzga la falta del servidor público frente a sus deberes y funciones. La <strong>penal</strong> persigue el delito (peculado, contrato sin cumplimiento de requisitos legales, interés indebido en la celebración de contratos). A ellas se suman la <strong>acción de repetición</strong> cuando el Estado ya fue condenado a indemnizar, y las acciones populares para proteger el patrimonio público como derecho colectivo. Para el control social esto significa que se puede acudir a las tres instancias a la vez, con la misma denuncia documentada.",
+    norma: "Constitución Política, arts. 6, 90, 268 y 277; Ley 610 de 2000, arts. 1 y 4; Ley 1474 de 2011; Ley 1952 de 2019 (Código General Disciplinario); Ley 472 de 1998 (acciones populares)."
+  },
+  {
+    id: "q09",
+    tema: "Estructura del Estado",
+    contexto: "Mediante decreto, un alcalde delega en su secretario general la ordenación del gasto y la actividad contractual del municipio.",
+    enunciado: "¿Qué efecto jurídico tiene esa delegación?",
+    opciones: [
+      "Transfiere de manera definitiva la titularidad de la competencia, de modo que el alcalde ya no puede reasumirla durante su periodo.",
+      "La responsabilidad por las decisiones adoptadas se traslada al delegatario, pero el delegante conserva los deberes de instrucción, orientación, control y vigilancia, y puede reasumir la competencia en cualquier momento.",
+      "El delegante responde solidariamente por todas las decisiones del delegatario, porque la delegación no libera de responsabilidad a quien delega.",
+      "Equivale a una descentralización: crea una dependencia con personería jurídica y patrimonio propio para contratar."
+    ],
+    correcta: 1,
+    explicacion: "La Constitución dispone que «la delegación exime de responsabilidad al delegante, la cual corresponderá exclusivamente al delegatario», pero eso no es un cheque en blanco: la delegación transfiere el <strong>ejercicio</strong> de funciones, no la titularidad, es esencialmente <strong>revocable</strong> y el delegante conserva los deberes de instruir y orientar. En materia contractual la ley lo dice de forma expresa: la delegación no exime al delegante del deber de control y vigilancia de la actividad precontractual y contractual. Conviene distinguir tres figuras que se confunden: la <strong>desconcentración</strong> radica competencias en dependencias o autoridades del mismo ente, sin personería jurídica; la <strong>descentralización</strong> supone entidades con personería jurídica, autonomía administrativa y patrimonio propio; la <strong>delegación</strong> es la transferencia revocable del ejercicio de funciones a un subalterno o a otra autoridad.",
+    norma: "Constitución Política, arts. 209 y 211; Ley 489 de 1998, arts. 7 a 12; Ley 1150 de 2007, art. 21."
+  },
+  {
+    id: "q10",
+    tema: "Participación y control social",
+    contexto: "Al terminar el año, la alcaldía publica en su página web el informe de gestión y anuncia que «con eso queda cumplida la rendición de cuentas». Además le dice a una veeduría que no puede actuar porque «no tiene personería jurídica otorgada por la Procuraduría».",
+    enunciado: "¿Cuál de las siguientes afirmaciones es correcta?",
+    opciones: [
+      "La administración tiene razón en ambos puntos: el informe publicado cumple la obligación y las veedurías requieren reconocimiento de la Procuraduría.",
+      "La rendición de cuentas es un proceso permanente que exige información, diálogo con la ciudadanía e incentivos, y las veedurías se constituyen por iniciativa ciudadana e inscriben su acta ante la personería municipal o la cámara de comercio.",
+      "La rendición de cuentas solo es obligatoria para entidades del orden nacional; en los municipios es voluntaria y depende del alcalde.",
+      "El control social únicamente puede ejercerse una vez terminada la ejecución del contrato, para no interferir con la función administrativa."
+    ],
+    correcta: 1,
+    explicacion: "La rendición de cuentas es una <strong>obligación permanente</strong> de las entidades públicas y de sus servidores, no un evento anual ni un archivo colgado en la web: comprende informar con lenguaje comprensible, <strong>dialogar</strong> con la ciudadanía y responder sus observaciones, y las entidades deben elaborar cada año una estrategia de rendición de cuentas que hace parte de su plan institucional. Sobre las veedurías, la ley es clara: cualquier grupo de ciudadanos puede constituirlas mediante un acta que se inscribe ante la <strong>personería municipal o distrital</strong> o ante la <strong>cámara de comercio</strong>; no dependen de un permiso de la Procuraduría. Y el control social se ejerce sobre todo el ciclo —planeación, contratación, ejecución y evaluación—, no solo al final. Complementan estas garantías el derecho de acceso a la información pública y el deber de publicar la información mínima obligatoria.",
+    norma: "Ley 1757 de 2015, arts. 48 a 60 (rendición de cuentas y control social); Ley 850 de 2003 (veedurías ciudadanas); Ley 1712 de 2014 (transparencia y acceso a la información)."
+  }
+];
+
+const TOTAL = PREGUNTAS.length;
+const LETRAS = ["A", "B", "C", "D"];
+
+/* ============================================================
+   2. UTILIDADES
+   ============================================================ */
+const $ = function (sel, raiz) { return (raiz || document).querySelector(sel); };
+const $$ = function (sel, raiz) { return Array.prototype.slice.call((raiz || document).querySelectorAll(sel)); };
+
+function esc(txt) {
+  return String(txt == null ? "" : txt)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
+
+let tiempoBrindis = 0;
+function avisar(mensaje) {
+  const nodo = $("#brindis");
+  nodo.textContent = mensaje;
+  nodo.classList.add("visible");
+  clearTimeout(tiempoBrindis);
+  tiempoBrindis = setTimeout(function () { nodo.classList.remove("visible"); }, 3200);
+}
+
+function aB64(texto) {
+  const bytes = new TextEncoder().encode(texto);
+  let bin = "";
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return btoa(bin);
+}
+function deB64(b64) {
+  const bin = atob(b64);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder().decode(bytes);
+}
+
+async function sha256(texto) {
+  if (window.crypto && window.crypto.subtle) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(texto));
+    return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+      return b.toString(16).padStart(2, "0");
+    }).join("");
+  }
+  // Reserva simple para contextos sin crypto.subtle (http sin TLS).
+  let h = 5381;
+  for (let i = 0; i < texto.length; i++) h = ((h << 5) + h + texto.charCodeAt(i)) | 0;
+  return "fb" + (h >>> 0).toString(16);
+}
+
+function fechaLegible(iso) {
+  try {
+    return new Date(iso).toLocaleString("es-CO", {
+      day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit"
+    });
+  } catch (e) { return iso; }
+}
+function minutos(seg) {
+  const m = Math.floor(seg / 60), s = seg % 60;
+  return m + ":" + String(s).padStart(2, "0");
+}
+
+/* Almacenamiento tolerante: todo lectura/escritura va envuelta. */
+const LS = {
+  leer: function (clave, porDefecto) {
+    try {
+      const v = localStorage.getItem(clave);
+      return v == null ? porDefecto : JSON.parse(v);
+    } catch (e) { return porDefecto; }
+  },
+  escribir: function (clave, valor) {
+    try { localStorage.setItem(clave, JSON.stringify(valor)); return true; }
+    catch (e) { return false; }
+  }
+};
+
+const CLAVE_REG = "pec_v1_registros";
+const CLAVE_CFG = "pec_v1_config";
+const PASS_INICIAL = "estado2026";
+
+function registros() { return LS.leer(CLAVE_REG, []); }
+function guardarRegistros(lista) { return LS.escribir(CLAVE_REG, lista); }
+function config() { return LS.leer(CLAVE_CFG, {}); }
+function guardarConfig(cfg) { return LS.escribir(CLAVE_CFG, cfg); }
+
+/* Descargas: usa la capacidad del visor si existe; si no, enlace clásico. */
+let capDescargas = null;
+if (window.claude && typeof window.claude.use === "function") {
+  try {
+    window.claude.use("downloads").then(function (d) { capDescargas = d; }).catch(function () {});
+  } catch (e) { /* sin capacidades */ }
+}
+async function descargar(nombre, contenido, mime) {
+  if (capDescargas) {
+    try {
+      await capDescargas.save({ filename: nombre, data: contenido });
+      avisar("Archivo guardado.");
+      return;
+    } catch (err) {
+      const codigo = err && err.code;
+      if (codigo === "declined") { return; }
+      if (codigo === "extension_not_enabled" || codigo === "rejected_extension") {
+        try {
+          await capDescargas.save({ filename: nombre.replace(/\.[^.]+$/, "") + ".txt", data: contenido });
+          avisar("Archivo guardado como .txt.");
+          return;
+        } catch (e2) { /* cae al método clásico */ }
+      }
+    }
+  }
+  try {
+    const blob = new Blob([contenido], { type: mime + ";charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = nombre;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1500);
+    avisar("Descarga iniciada.");
+  } catch (e) {
+    avisar("Este visor bloquea las descargas. Copie el código de resultado.");
+  }
+}
+
+async function copiar(texto, mensaje) {
+  try {
+    await navigator.clipboard.writeText(texto);
+    avisar(mensaje || "Copiado.");
+  } catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = texto; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); avisar(mensaje || "Copiado."); }
+    catch (e2) { avisar("No se pudo copiar. Selecciónelo manualmente."); }
+    ta.remove();
+  }
+}
+
+/* ============================================================
+   3. TEMA CLARO / OSCURO
+   ============================================================ */
+(function tema() {
+  const guardado = LS.leer("pec_v1_tema", null);
+  if (guardado) document.documentElement.setAttribute("data-theme", guardado);
+  $("#btn-tema").addEventListener("click", function () {
+    const actual = document.documentElement.getAttribute("data-theme");
+    const oscuroSistema = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const siguiente = actual ? (actual === "dark" ? "light" : "dark") : (oscuroSistema ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", siguiente);
+    LS.escribir("pec_v1_tema", siguiente);
+  });
+})();
+
+/* ============================================================
+   4. NAVEGACIÓN ENTRE VISTAS
+   ============================================================ */
+const VISTAS = ["vista-inicio", "vista-test", "vista-resultado", "vista-login", "vista-admin"];
+function mostrar(id) {
+  VISTAS.forEach(function (v) { $("#" + v).classList.toggle("oculto", v !== id); });
+  window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+}
+
+/* ============================================================
+   5. REPOSITORIO CENTRAL (opcional)
+   ============================================================ */
+async function enviarRemoto(registro) {
+  const cfg = config();
+  if (!cfg.endpoint) return { estado: "sin-config" };
+  try {
+    const respuesta = await fetch(cfg.endpoint, {
+      method: "POST",
+      // text/plain evita la petición de verificación previa (CORS preflight),
+      // que Google Apps Script no responde.
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({ accion: "guardar", clave: cfg.claveApi || "", registro: registro })
+    });
+    const datos = await respuesta.json();
+    if (datos && datos.ok) return { estado: "enviado" };
+    return { estado: "error", detalle: (datos && datos.error) || "respuesta no reconocida" };
+  } catch (e) {
+    return { estado: "error", detalle: e.message };
+  }
+}
+
+async function traerRemoto() {
+  const cfg = config();
+  if (!cfg.endpoint) throw new Error("No hay repositorio central configurado.");
+  const url = cfg.endpoint + (cfg.endpoint.indexOf("?") >= 0 ? "&" : "?") +
+    "accion=listar&clave=" + encodeURIComponent(cfg.claveApi || "");
+  const respuesta = await fetch(url, { method: "GET" });
+  const datos = await respuesta.json();
+  if (!datos || !datos.ok) throw new Error((datos && datos.error) || "respuesta no reconocida");
+  return datos.registros || [];
+}
+
+function fusionar(lista) {
+  const actuales = registros();
+  const vistos = {};
+  actuales.forEach(function (r) { vistos[r.id] = true; });
+  let nuevos = 0;
+  lista.forEach(function (r) {
+    if (r && r.id && !vistos[r.id]) { actuales.push(r); vistos[r.id] = true; nuevos++; }
+  });
+  actuales.sort(function (a, b) { return String(b.fin).localeCompare(String(a.fin)); });
+  guardarRegistros(actuales);
+  return nuevos;
+}
+
+/* ============================================================
+   6. LA PRUEBA
+   ============================================================ */
+let sesion = null;
+
+function mezclar(arreglo) {
+  const copia = arreglo.slice();
+  for (let i = copia.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const t = copia[i]; copia[i] = copia[j]; copia[j] = t;
+  }
+  return copia;
+}
+
+function iniciarPrueba(datos) {
+  sesion = {
+    participante: datos,
+    inicio: new Date().toISOString(),
+    inicioMs: Date.now(),
+    marcaPregunta: Date.now(),
+    indice: 0,
+    aciertos: 0,
+    respuestas: [],
+    ordenes: PREGUNTAS.map(function (p) { return mezclar([0, 1, 2, 3]); })
+  };
+  mostrar("vista-test");
+  pintarPregunta();
+}
+
+function actualizarProgreso() {
+  const n = sesion.indice;
+  $("#prog-texto").textContent = "Pregunta " + Math.min(n + 1, TOTAL) + " de " + TOTAL;
+  $("#prog-aciertos").textContent = sesion.aciertos + (sesion.aciertos === 1 ? " acierto" : " aciertos");
+  const pct = (n / TOTAL) * 100;
+  $("#relleno").style.width = pct + "%";
+  $("#riel").setAttribute("aria-valuenow", String(n));
+}
+
+const ICONO_BIEN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>';
+const ICONO_MAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+
+function pintarPregunta() {
+  actualizarProgreso();
+  const p = PREGUNTAS[sesion.indice];
+  const orden = sesion.ordenes[sesion.indice];
+  sesion.marcaPregunta = Date.now();
+
+  const opcionesHtml = orden.map(function (idxOriginal, posicion) {
+    return '<button class="opcion" type="button" role="radio" aria-checked="false" ' +
+      'data-original="' + idxOriginal + '">' +
+      '<span class="letra" aria-hidden="true">' + LETRAS[posicion] + '</span>' +
+      '<span>' + esc(p.opciones[idxOriginal]) + '</span>' +
+      '</button>';
+  }).join("");
+
+  $("#lienzo-pregunta").innerHTML =
+    '<div class="cab-pregunta">' +
+      '<span class="eyebrow">Pregunta ' + (sesion.indice + 1) + ' / ' + TOTAL + '</span>' +
+      '<span class="tema-tag">' + esc(p.tema) + '</span>' +
+    '</div>' +
+    '<p class="contexto">' + esc(p.contexto) + '</p>' +
+    '<h2 class="enunciado">' + esc(p.enunciado) + '</h2>' +
+    '<div class="opciones" role="radiogroup" aria-label="Opciones de respuesta" id="grupo-opciones">' +
+      opcionesHtml +
+    '</div>' +
+    '<div id="zona-veredicto" aria-live="polite"></div>';
+
+  $$("#grupo-opciones .opcion").forEach(function (boton) {
+    boton.addEventListener("click", function () { responder(parseInt(boton.dataset.original, 10)); });
+  });
+}
+
+function responder(elegidaOriginal) {
+  const p = PREGUNTAS[sesion.indice];
+  const acierto = elegidaOriginal === p.correcta;
+  const segundos = Math.round((Date.now() - sesion.marcaPregunta) / 1000);
+
+  if (acierto) sesion.aciertos++;
+  sesion.respuestas.push({
+    qid: p.id, tema: p.tema, elegida: elegidaOriginal, correcta: p.correcta,
+    acierto: acierto, segundos: segundos
+  });
+
+  $$("#grupo-opciones .opcion").forEach(function (boton) {
+    const original = parseInt(boton.dataset.original, 10);
+    boton.disabled = true;
+    boton.setAttribute("aria-checked", original === elegidaOriginal ? "true" : "false");
+    if (original === p.correcta) boton.classList.add("acierto");
+    else if (original === elegidaOriginal) boton.classList.add("fallo");
+    else boton.classList.add("atenuada");
+  });
+
+  const ultima = sesion.indice === TOTAL - 1;
+  $("#zona-veredicto").innerHTML =
+    '<div class="veredicto ' + (acierto ? "bien" : "mal") + '">' +
+      '<div class="veredicto-cab">' + (acierto ? ICONO_BIEN : ICONO_MAL) +
+        (acierto ? "Respuesta correcta" : "Respuesta incorrecta") + '</div>' +
+      '<p class="explicacion">' + p.explicacion + '</p>' +
+      '<p class="norma"><b>Fundamento:</b> ' + esc(p.norma) + '</p>' +
+      '<button class="btn btn-principal" type="button" id="btn-siguiente">' +
+        (ultima ? "Ver mi resultado" : "Siguiente pregunta") +
+      '</button>' +
+    '</div>';
+
+  $("#btn-siguiente").addEventListener("click", avanzar);
+  $("#btn-siguiente").focus();
+  actualizarProgreso();
+}
+
+function avanzar() {
+  if (sesion.indice === TOTAL - 1) { terminar(); return; }
+  sesion.indice++;
+  pintarPregunta();
+}
+
+function nivelDe(puntaje) {
+  if (puntaje >= 9) return { nombre: "Dominio experto", mensaje: "Maneja con solvencia las reglas del presupuesto y de la estructura del Estado. Está en condiciones de acompañar procesos de incidencia y de control social con argumentos técnicos." };
+  if (puntaje >= 7) return { nombre: "Dominio alto", mensaje: "Tiene una base sólida. Revise las preguntas falladas: suelen ser los detalles procedimentales los que deciden si una gestión prospera o se cae." };
+  if (puntaje >= 5) return { nombre: "Dominio intermedio", mensaje: "Reconoce los conceptos generales, pero conviene afianzar el ciclo presupuestal y las competencias de cada órgano antes de asumir responsabilidades de gestión pública." };
+  if (puntaje >= 3) return { nombre: "Dominio inicial", mensaje: "Hay vacíos importantes en temas centrales. Le recomendamos estudiar las explicaciones de esta prueba y volver a presentarla." };
+  return { nombre: "Punto de partida", mensaje: "Esta prueba es exigente y sirve como diagnóstico. Empiece por la estructura del Estado y el ciclo del presupuesto: son la base de todo lo demás." };
+}
+
+function aro(puntaje) {
+  const r = 52, circ = 2 * Math.PI * r;
+  const avance = (puntaje / TOTAL) * circ;
+  const color = puntaje >= 7 ? "var(--ok)" : (puntaje >= 5 ? "var(--ocre-fuerte)" : "var(--mal)");
+  return '<svg viewBox="0 0 118 118" role="img" aria-label="Puntaje ' + puntaje + ' de ' + TOTAL + '">' +
+    '<circle cx="59" cy="59" r="' + r + '" fill="none" stroke="var(--linea)" stroke-width="11"/>' +
+    '<circle cx="59" cy="59" r="' + r + '" fill="none" stroke="' + color + '" stroke-width="11" ' +
+      'stroke-linecap="round" stroke-dasharray="' + avance + ' ' + circ + '"/>' +
+    '</svg>' +
+    '<div class="aro-txt"><div><div class="aro-num">' + puntaje + '/' + TOTAL + '</div>' +
+    '<div class="aro-sub">Aciertos</div></div></div>';
+}
+
+function porTema(respuestas) {
+  const mapa = {};
+  respuestas.forEach(function (r) {
+    if (!mapa[r.tema]) mapa[r.tema] = { total: 0, aciertos: 0 };
+    mapa[r.tema].total++;
+    if (r.acierto) mapa[r.tema].aciertos++;
+  });
+  return mapa;
+}
+
+async function terminar() {
+  const duracion = Math.round((Date.now() - sesion.inicioMs) / 1000);
+  const registro = {
+    id: "r" + Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
+    version: 1,
+    nombre: sesion.participante.nombre,
+    organizacion: sesion.participante.organizacion,
+    municipio: sesion.participante.municipio,
+    correo: sesion.participante.correo,
+    inicio: sesion.inicio,
+    fin: new Date().toISOString(),
+    duracionSeg: duracion,
+    puntaje: sesion.aciertos,
+    total: TOTAL,
+    respuestas: sesion.respuestas
+  };
+
+  const lista = registros();
+  lista.unshift(registro);
+  const guardo = guardarRegistros(lista);
+
+  const nivel = nivelDe(registro.puntaje);
+  $("#res-saludo").textContent = registro.nombre.split(" ")[0] + ", así le fue";
+  $("#aro").innerHTML = aro(registro.puntaje);
+  $("#res-nivel").textContent = nivel.nombre;
+  $("#res-mensaje").textContent = nivel.mensaje;
+  $("#res-meta").textContent = "Tiempo total " + minutos(duracion) + " · " + fechaLegible(registro.fin);
+
+  const temas = porTema(registro.respuestas);
+  $("#res-temas").innerHTML = Object.keys(temas).map(function (t) {
+    const d = temas[t];
+    const pct = Math.round((d.aciertos / d.total) * 100);
+    return '<div class="fila-tema"><span>' + esc(t) + '</span>' +
+      '<span class="num" style="text-align:right;font-weight:600">' + d.aciertos + "/" + d.total + '</span>' +
+      '<span class="mini-riel"><span class="mini-relleno" style="width:' + pct + '%"></span></span></div>';
+  }).join("");
+
+  $("#res-revision").innerHTML = registro.respuestas.map(function (r, i) {
+    const p = PREGUNTAS[i];
+    return '<details class="item-rev">' +
+      '<summary><span class="marca-rev ' + (r.acierto ? "bien" : "mal") + '">' + (i + 1) + '</span>' +
+      '<span><b>' + esc(p.tema) + '</b> — ' + esc(p.enunciado) + '</span></summary>' +
+      '<div class="cuerpo-rev">' +
+        '<p style="font-size:13.5px;color:var(--tinta-2)"><b>Su respuesta:</b> ' +
+          esc(p.opciones[r.elegida]) + '</p>' +
+        (r.acierto ? "" : '<p style="font-size:13.5px;color:var(--ok)"><b>Respuesta correcta:</b> ' +
+          esc(p.opciones[p.correcta]) + '</p>') +
+        '<p class="explicacion">' + p.explicacion + '</p>' +
+        '<p class="norma"><b>Fundamento:</b> ' + esc(p.norma) + '</p>' +
+      '</div></details>';
+  }).join("");
+
+  const codigo = "PEC1:" + aB64(JSON.stringify(registro));
+  $("#codigo-resultado").textContent = codigo;
+  $("#btn-copiar-codigo").onclick = function () { copiar(codigo, "Código copiado."); };
+  $("#btn-descargar-mio").onclick = function () {
+    descargar("resultado-" + registro.nombre.toLowerCase().replace(/[^a-z0-9]+/g, "-") + ".json",
+      JSON.stringify(registro, null, 2), "application/json");
+  };
+
+  mostrar("vista-resultado");
+
+  const zona = $("#res-envio");
+  zona.innerHTML = '<div class="aviso"><span>Registrando su resultado…</span></div>';
+  const envio = await enviarRemoto(registro);
+  if (envio.estado === "enviado") {
+    zona.innerHTML = '<div class="aviso bueno">' + ICONO_BIEN_MINI +
+      '<span>Resultado enviado al repositorio de la coordinación y guardado en este dispositivo.</span></div>';
+  } else if (envio.estado === "sin-config") {
+    zona.innerHTML = '<div class="aviso' + (guardo ? "" : " malo") + '">' +
+      '<span>' + (guardo
+        ? "Resultado guardado en este dispositivo. Si la coordinación se lo pide, envíele el código de resultado que aparece abajo."
+        : "Este navegador bloquea el almacenamiento local. Copie el código de resultado y envíelo a la coordinación para que quede registrado.") +
+      '</span></div>';
+  } else {
+    zona.innerHTML = '<div class="aviso ocre"><span>Guardado en este dispositivo, pero no se pudo contactar el repositorio central (' +
+      esc(envio.detalle || "sin detalle") + '). Envíe el código de resultado a la coordinación.</span></div>';
+  }
+}
+
+const ICONO_BIEN_MINI = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>';
+
+/* ============================================================
+   7. ANALÍTICA
+   ============================================================ */
+function analizar(regs) {
+  const n = regs.length;
+  const base = {
+    n: n,
+    promedio: 0, pctGlobal: 0, duracionProm: 0, aprobados: 0,
+    porPregunta: PREGUNTAS.map(function (p, i) {
+      return { indice: i, id: p.id, tema: p.tema, enunciado: p.enunciado,
+               respondidas: 0, aciertos: 0, pct: 0, segundos: 0,
+               distractores: [0, 0, 0, 0] };
+    }),
+    porTema: {},
+    distribucion: new Array(TOTAL + 1).fill(0)
+  };
+  if (!n) return base;
+
+  let sumaPuntaje = 0, sumaSeg = 0;
+  regs.forEach(function (r) {
+    const puntaje = Number(r.puntaje) || 0;
+    sumaPuntaje += puntaje;
+    sumaSeg += Number(r.duracionSeg) || 0;
+    if (puntaje >= 6) base.aprobados++;
+    if (puntaje >= 0 && puntaje <= TOTAL) base.distribucion[puntaje]++;
+    (r.respuestas || []).forEach(function (resp) {
+      const idx = PREGUNTAS.findIndex(function (p) { return p.id === resp.qid; });
+      if (idx < 0) return;
+      const celda = base.porPregunta[idx];
+      celda.respondidas++;
+      celda.segundos += Number(resp.segundos) || 0;
+      if (resp.acierto) celda.aciertos++;
+      else if (typeof resp.elegida === "number" && resp.elegida >= 0 && resp.elegida < 4) {
+        celda.distractores[resp.elegida]++;
+      }
+      const tema = resp.tema || PREGUNTAS[idx].tema;
+      if (!base.porTema[tema]) base.porTema[tema] = { total: 0, aciertos: 0 };
+      base.porTema[tema].total++;
+      if (resp.acierto) base.porTema[tema].aciertos++;
+    });
+  });
+
+  base.promedio = sumaPuntaje / n;
+  base.pctGlobal = (sumaPuntaje / (n * TOTAL)) * 100;
+  base.duracionProm = Math.round(sumaSeg / n);
+  base.porPregunta.forEach(function (c) {
+    c.pct = c.respondidas ? (c.aciertos / c.respondidas) * 100 : 0;
+    c.segProm = c.respondidas ? Math.round(c.segundos / c.respondidas) : 0;
+  });
+  return base;
+}
+
+function colorPct(pct) {
+  if (pct >= 70) return "var(--ok)";
+  if (pct >= 45) return "var(--ocre-fuerte)";
+  return "var(--mal)";
+}
+function clasePct(pct) {
+  if (pct >= 70) return "alto";
+  if (pct >= 45) return "medio";
+  return "bajo";
+}
+
+/* Barras horizontales en HTML: se adaptan solas a cualquier ancho. */
+function barrasHorizontales(filas) {
+  return '<div style="display:flex;flex-direction:column;gap:13px">' + filas.map(function (f) {
+    const pct = Math.round(f.pct);
+    return '<div>' +
+      '<div style="display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-bottom:5px">' +
+        '<span style="min-width:0">' + f.etiqueta + '</span>' +
+        '<span class="num" style="font-weight:600;flex:none">' + pct + '%' +
+          (f.nota ? ' <span style="color:var(--tinta-3);font-weight:400">' + esc(f.nota) + '</span>' : '') +
+        '</span>' +
+      '</div>' +
+      '<div class="riel" role="img" aria-label="' + esc(f.aria || (pct + " por ciento")) + '">' +
+        '<div class="relleno" style="width:' + pct + '%;background:' + colorPct(pct) + '"></div>' +
+      '</div>' +
+    '</div>';
+  }).join("") + '</div>';
+}
+
+/* Histograma vertical en SVG. */
+function histograma(distribucion) {
+  const ancho = 620, alto = 230, margenIzq = 34, margenAbajo = 40, margenArriba = 16;
+  const maximo = Math.max.apply(null, distribucion.concat([1]));
+  const utilAncho = ancho - margenIzq - 12;
+  const utilAlto = alto - margenAbajo - margenArriba;
+  const paso = utilAncho / distribucion.length;
+  const anchoBarra = Math.min(paso - 8, 42);
+
+  let ejes = "";
+  const lineas = Math.min(4, Math.max(1, maximo));
+  for (let i = 0; i <= lineas; i++) {
+    const y = margenArriba + (utilAlto / lineas) * i;
+    const valor = Math.round(maximo - (maximo / lineas) * i);
+    ejes += '<line x1="' + margenIzq + '" y1="' + y + '" x2="' + (ancho - 12) + '" y2="' + y +
+      '" stroke="var(--linea-2)" stroke-width="1"/>' +
+      '<text x="' + (margenIzq - 8) + '" y="' + (y + 4) + '" text-anchor="end" font-size="11" ' +
+      'fill="var(--tinta-3)" font-family="var(--ui)">' + valor + '</text>';
+  }
+
+  let barras = "";
+  distribucion.forEach(function (cuenta, puntaje) {
+    const h = maximo ? (cuenta / maximo) * utilAlto : 0;
+    const x = margenIzq + paso * puntaje + (paso - anchoBarra) / 2;
+    const y = margenArriba + utilAlto - h;
+    const color = puntaje >= 7 ? "var(--ok)" : (puntaje >= 5 ? "var(--ocre-fuerte)" : "var(--mal)");
+    if (cuenta > 0) {
+      barras += '<rect x="' + x + '" y="' + y + '" width="' + anchoBarra + '" height="' + Math.max(h, 3) +
+        '" rx="4" fill="' + color + '"/>' +
+        '<text x="' + (x + anchoBarra / 2) + '" y="' + (y - 6) + '" text-anchor="middle" font-size="11.5" ' +
+        'font-weight="600" fill="var(--tinta-2)" font-family="var(--ui)">' + cuenta + '</text>';
+    } else {
+      barras += '<rect x="' + x + '" y="' + (margenArriba + utilAlto - 3) + '" width="' + anchoBarra +
+        '" height="3" rx="1.5" fill="var(--linea)"/>';
+    }
+    barras += '<text x="' + (x + anchoBarra / 2) + '" y="' + (alto - margenAbajo + 20) +
+      '" text-anchor="middle" font-size="12" fill="var(--tinta-2)" font-family="var(--ui)">' + puntaje + '</text>';
+  });
+
+  return '<div class="lienzo"><svg viewBox="0 0 ' + ancho + ' ' + alto + '" role="img" ' +
+    'aria-label="Distribución de calificaciones de 0 a 10 aciertos">' + ejes + barras +
+    '<text x="' + (margenIzq + utilAncho / 2) + '" y="' + (alto - 6) + '" text-anchor="middle" ' +
+    'font-size="11" fill="var(--tinta-3)" font-family="var(--ui)" letter-spacing="1">ACIERTOS OBTENIDOS</text>' +
+    '</svg></div>';
+}
+
+/* ============================================================
+   8. PANEL DE LA COORDINACIÓN
+   ============================================================ */
+let filtroBusqueda = "";
+
+function pintarPanel() {
+  const regs = registros();
+  const a = analizar(regs);
+
+  $("#admin-sub").textContent = a.n
+    ? a.n + (a.n === 1 ? " intento registrado" : " intentos registrados") +
+      " · promedio " + a.promedio.toFixed(1) + "/" + TOTAL
+    : "Sin registros todavía. Comparta el enlace de la prueba para empezar a recibir resultados.";
+
+  /* --- KPIs --- */
+  $("#kpis").innerHTML = [
+    { val: a.n, eti: "Participantes", nota: a.n ? "Intentos completados" : "Aún nadie ha respondido" },
+    { val: a.n ? a.promedio.toFixed(1) : "—", eti: "Promedio", nota: "Sobre " + TOTAL + " preguntas" },
+    { val: a.n ? Math.round(a.pctGlobal) + "%" : "—", eti: "Acierto global", nota: "Respuestas correctas del total" },
+    { val: a.n ? Math.round((a.aprobados / a.n) * 100) + "%" : "—", eti: "6 o más aciertos", nota: a.aprobados + " de " + a.n + " personas" },
+    { val: a.n ? minutos(a.duracionProm) : "—", eti: "Tiempo medio", nota: "Minutos por intento" }
+  ].map(function (k) {
+    return '<div class="kpi"><div class="kpi-val">' + esc(k.val) + '</div>' +
+      '<div class="kpi-eti">' + esc(k.eti) + '</div>' +
+      '<div class="kpi-nota">' + esc(k.nota) + '</div></div>';
+  }).join("");
+
+  /* --- Gráficas --- */
+  if (!a.n) {
+    $("#graficas").innerHTML = '<div class="panel-grafica"><div class="vacio">' +
+      '<strong>Todavía no hay datos que graficar</strong>' +
+      '<span>Las gráficas aparecen apenas se registre el primer intento.</span>' +
+      '<button class="btn btn-secundario" type="button" onclick="document.getElementById(\'btn-copiar-enlace\').click()">Copiar enlace de la prueba</button>' +
+      '</div></div>';
+    $("#tabla-participantes").innerHTML = '<div class="vacio"><strong>Sin participantes</strong>' +
+      '<span>Comparta el enlace para recibir los primeros resultados.</span></div>';
+    $("#tabla-preguntas").innerHTML = '<div class="vacio"><strong>Sin respuestas</strong>' +
+      '<span>El análisis por pregunta requiere al menos un intento.</span></div>';
+    $("#detalle-participante").innerHTML = "";
+    return;
+  }
+
+  const filasPregunta = a.porPregunta.map(function (c) {
+    return {
+      pct: c.pct,
+      etiqueta: '<b class="num">P' + String(c.indice + 1).padStart(2, "0") + '</b> ' +
+        esc(c.tema) + ' <span style="color:var(--tinta-3)">· ' + c.aciertos + '/' + c.respondidas + '</span>',
+      aria: "Pregunta " + (c.indice + 1) + ": " + Math.round(c.pct) + " por ciento de acierto"
+    };
+  });
+
+  const temas = Object.keys(a.porTema).map(function (t) {
+    const d = a.porTema[t];
+    return {
+      pct: (d.aciertos / d.total) * 100,
+      etiqueta: esc(t),
+      nota: "(" + d.aciertos + "/" + d.total + ")",
+      aria: t + ": " + Math.round((d.aciertos / d.total) * 100) + " por ciento"
+    };
+  }).sort(function (x, y) { return x.pct - y.pct; });
+
+  const dificiles = a.porPregunta.slice().sort(function (x, y) { return x.pct - y.pct; }).slice(0, 3);
+
+  $("#graficas").innerHTML =
+    '<div class="panel-grafica">' +
+      '<div><h3>Porcentaje de acierto por pregunta</h3>' +
+      '<p class="sub">Verde 70 % o más · ámbar entre 45 % y 69 % · rojo por debajo de 45 %.</p></div>' +
+      barrasHorizontales(filasPregunta) +
+    '</div>' +
+    '<div class="panel-grafica">' +
+      '<div><h3>Distribución de calificaciones</h3>' +
+      '<p class="sub">Cuántas personas obtuvieron cada puntaje.</p></div>' +
+      histograma(a.distribucion) +
+    '</div>' +
+    '<div class="panel-grafica">' +
+      '<div><h3>Desempeño por tema</h3>' +
+      '<p class="sub">Del tema más débil al más sólido. Aquí se decide qué reforzar en el próximo taller.</p></div>' +
+      barrasHorizontales(temas) +
+    '</div>' +
+    '<div class="panel-grafica">' +
+      '<div><h3>Las tres preguntas más difíciles</h3>' +
+      '<p class="sub">Con la opción incorrecta que más se eligió: ahí está el malentendido a corregir.</p></div>' +
+      dificiles.map(function (c) {
+        const maxDist = c.distractores.indexOf(Math.max.apply(null, c.distractores));
+        const cuenta = c.distractores[maxDist];
+        return '<div style="border-left:3px solid ' + colorPct(c.pct) + ';padding-left:12px;display:flex;flex-direction:column;gap:5px">' +
+          '<div style="display:flex;gap:10px;align-items:baseline;justify-content:space-between">' +
+            '<span class="eyebrow">Pregunta ' + (c.indice + 1) + ' · ' + esc(c.tema) + '</span>' +
+            '<span class="chip ' + clasePct(c.pct) + '">' + Math.round(c.pct) + '% acierto</span>' +
+          '</div>' +
+          '<p style="font-size:14px;line-height:1.45">' + esc(c.enunciado) + '</p>' +
+          (cuenta > 0
+            ? '<p style="font-size:13px;color:var(--tinta-2)"><b>Error más frecuente</b> (' + cuenta +
+              (cuenta === 1 ? " persona" : " personas") + '): ' + esc(PREGUNTAS[c.indice].opciones[maxDist]) + '</p>'
+            : '<p style="font-size:13px;color:var(--tinta-3)">Sin errores registrados.</p>') +
+        '</div>';
+      }).join("") +
+    '</div>';
+
+  /* --- Tabla de participantes --- */
+  const busqueda = filtroBusqueda.trim().toLowerCase();
+  const visibles = regs.filter(function (r) {
+    if (!busqueda) return true;
+    return [r.nombre, r.organizacion, r.municipio, r.correo].join(" ").toLowerCase().indexOf(busqueda) >= 0;
+  });
+
+  $("#tabla-participantes").innerHTML = visibles.length
+    ? '<table><thead><tr>' +
+        '<th>Fecha</th><th>Nombre</th><th>Organización</th><th>Municipio</th>' +
+        '<th class="num">Puntaje</th><th class="num">Tiempo</th><th></th>' +
+      '</tr></thead><tbody>' +
+      visibles.map(function (r) {
+        const pct = (r.puntaje / (r.total || TOTAL)) * 100;
+        return '<tr><td style="white-space:nowrap">' + esc(fechaLegible(r.fin)) + '</td>' +
+          '<td><b>' + esc(r.nombre) + '</b>' + (r.correo ? '<br><span style="color:var(--tinta-3);font-size:12px">' + esc(r.correo) + '</span>' : '') + '</td>' +
+          '<td>' + esc(r.organizacion) + '</td>' +
+          '<td>' + esc(r.municipio) + '</td>' +
+          '<td class="num"><span class="chip ' + clasePct(pct) + '">' + r.puntaje + '/' + (r.total || TOTAL) + '</span></td>' +
+          '<td class="num">' + minutos(r.duracionSeg || 0) + '</td>' +
+          '<td><button class="btn btn-plano" type="button" data-detalle="' + esc(r.id) + '">Ver</button></td></tr>';
+      }).join("") + '</tbody></table>'
+    : '<div class="vacio"><strong>Sin coincidencias</strong><span>Ninguna persona coincide con «' + esc(filtroBusqueda) + '».</span></div>';
+
+  $$("#tabla-participantes [data-detalle]").forEach(function (b) {
+    b.addEventListener("click", function () { verDetalle(b.dataset.detalle); });
+  });
+
+  /* --- Tabla de preguntas --- */
+  const ordenadas = a.porPregunta.slice().sort(function (x, y) { return x.pct - y.pct; });
+  $("#tabla-preguntas").innerHTML = '<table><thead><tr>' +
+    '<th>N.º</th><th>Tema</th><th>Pregunta</th><th class="num">Acierto</th>' +
+    '<th>Error más frecuente</th><th class="num">Tiempo medio</th>' +
+    '</tr></thead><tbody>' +
+    ordenadas.map(function (c) {
+      const maxDist = c.distractores.indexOf(Math.max.apply(null, c.distractores));
+      const cuenta = c.distractores[maxDist];
+      return '<tr><td class="num">' + (c.indice + 1) + '</td>' +
+        '<td>' + esc(c.tema) + '</td>' +
+        '<td style="max-width:340px">' + esc(c.enunciado) + '</td>' +
+        '<td class="num"><span class="chip ' + clasePct(c.pct) + '">' + Math.round(c.pct) + '%</span>' +
+          '<div class="barra-celda"><i style="width:' + Math.round(c.pct) + '%;background:' + colorPct(c.pct) + '"></i></div></td>' +
+        '<td style="max-width:300px;font-size:12.5px;color:var(--tinta-2)">' +
+          (cuenta > 0 ? esc(PREGUNTAS[c.indice].opciones[maxDist]) + ' <b>(' + cuenta + ')</b>' : '—') + '</td>' +
+        '<td class="num">' + c.segProm + ' s</td></tr>';
+    }).join("") + '</tbody></table>';
+}
+
+function verDetalle(id) {
+  const r = registros().filter(function (x) { return x.id === id; })[0];
+  if (!r) return;
+  const zona = $("#detalle-participante");
+  zona.innerHTML = '<div class="panel-grafica">' +
+    '<div class="cab-seccion"><div><p class="eyebrow">Detalle del intento</p>' +
+      '<h3 style="font-size:18px;margin-top:3px">' + esc(r.nombre) + '</h3>' +
+      '<p>' + esc(r.organizacion) + ' · ' + esc(r.municipio) + ' · ' + esc(fechaLegible(r.fin)) +
+      ' · ' + minutos(r.duracionSeg || 0) + '</p></div>' +
+      '<button class="btn btn-plano" type="button" id="btn-cerrar-detalle">Cerrar</button></div>' +
+    '<div class="tabla-envolt"><table><thead><tr><th>N.º</th><th>Pregunta</th>' +
+      '<th>Respuesta elegida</th><th class="num">Resultado</th></tr></thead><tbody>' +
+      (r.respuestas || []).map(function (resp, i) {
+        const p = PREGUNTAS.filter(function (q) { return q.id === resp.qid; })[0] || PREGUNTAS[i];
+        return '<tr><td class="num">' + (i + 1) + '</td>' +
+          '<td style="max-width:300px">' + esc(p.enunciado) + '</td>' +
+          '<td style="max-width:320px;font-size:12.5px">' + esc(p.opciones[resp.elegida]) + '</td>' +
+          '<td class="num"><span class="chip ' + (resp.acierto ? "alto" : "bajo") + '">' +
+            (resp.acierto ? "Correcta" : "Incorrecta") + '</span></td></tr>';
+      }).join("") +
+    '</tbody></table></div></div>';
+  $("#btn-cerrar-detalle").addEventListener("click", function () { zona.innerHTML = ""; });
+  zona.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+/* ============================================================
+   9. EXPORTACIÓN
+   ============================================================ */
+function aCsv(regs) {
+  const cab = ["fecha_fin", "nombre", "organizacion", "municipio", "correo",
+    "puntaje", "total", "porcentaje", "minutos"];
+  PREGUNTAS.forEach(function (p, i) {
+    cab.push("p" + (i + 1) + "_acierto");
+    cab.push("p" + (i + 1) + "_opcion");
+  });
+
+  function celda(v) {
+    const s = String(v == null ? "" : v).replace(/"/g, '""');
+    return /[";\n]/.test(s) ? '"' + s + '"' : s;
+  }
+
+  const filas = regs.map(function (r) {
+    const fila = [
+      r.fin, r.nombre, r.organizacion, r.municipio, r.correo || "",
+      r.puntaje, r.total || TOTAL,
+      Math.round((r.puntaje / (r.total || TOTAL)) * 100),
+      ((r.duracionSeg || 0) / 60).toFixed(1)
+    ];
+    PREGUNTAS.forEach(function (p) {
+      const resp = (r.respuestas || []).filter(function (x) { return x.qid === p.id; })[0];
+      fila.push(resp ? (resp.acierto ? 1 : 0) : "");
+      fila.push(resp && typeof resp.elegida === "number" ? LETRAS[resp.elegida] : "");
+    });
+    return fila.map(celda).join(";");
+  });
+
+  // El BOM hace que Excel abra el archivo con los acentos correctos.
+  return "﻿" + cab.join(";") + "\n" + filas.join("\n");
+}
+
+/* ============================================================
+   10. CÓDIGO PARA EL REPOSITORIO CENTRAL (Google Apps Script)
+   ============================================================ */
+const SCRIPT_APPS = [
+  "const CLAVE = 'cambie-esta-clave';",
+  "const HOJA = 'respuestas';",
+  "",
+  "function doPost(e) {",
+  "  try {",
+  "    const datos = JSON.parse(e.postData.contents);",
+  "    if (datos.clave !== CLAVE) return responder({ ok: false, error: 'clave invalida' });",
+  "    const r = datos.registro;",
+  "    hoja().appendRow([r.id, r.fin, r.nombre, r.organizacion, r.municipio,",
+  "      r.correo || '', r.puntaje, r.total, r.duracionSeg, JSON.stringify(r)]);",
+  "    return responder({ ok: true });",
+  "  } catch (err) { return responder({ ok: false, error: String(err) }); }",
+  "}",
+  "",
+  "function doGet(e) {",
+  "  try {",
+  "    if (e.parameter.clave !== CLAVE) return responder({ ok: false, error: 'clave invalida' });",
+  "    const filas = hoja().getDataRange().getValues();",
+  "    const registros = [];",
+  "    for (var i = 1; i < filas.length; i++) {",
+  "      if (filas[i][9]) { try { registros.push(JSON.parse(filas[i][9])); } catch (x) {} }",
+  "    }",
+  "    return responder({ ok: true, registros: registros });",
+  "  } catch (err) { return responder({ ok: false, error: String(err) }); }",
+  "}",
+  "",
+  "function hoja() {",
+  "  const libro = SpreadsheetApp.getActiveSpreadsheet();",
+  "  var h = libro.getSheetByName(HOJA);",
+  "  if (!h) {",
+  "    h = libro.insertSheet(HOJA);",
+  "    h.appendRow(['id', 'fecha', 'nombre', 'organizacion', 'municipio',",
+  "      'correo', 'puntaje', 'total', 'segundos', 'json']);",
+  "  }",
+  "  return h;",
+  "}",
+  "",
+  "function responder(obj) {",
+  "  return ContentService.createTextOutput(JSON.stringify(obj))",
+  "    .setMimeType(ContentService.MimeType.JSON);",
+  "}"
+].join("\n");
+
+/* ============================================================
+   11. ARRANQUE Y CONEXIONES DE LA INTERFAZ
+   ============================================================ */
+
+/* Temas de la portada, tomados del propio banco de preguntas. */
+(function pintarTemas() {
+  const vistos = [];
+  PREGUNTAS.forEach(function (p) { if (vistos.indexOf(p.tema) < 0) vistos.push(p.tema); });
+  $("#lista-temas").innerHTML = vistos.map(function (t) {
+    return '<li class="pastilla">' + esc(t) + '</li>';
+  }).join("");
+})();
+
+$("#script-apps").textContent = SCRIPT_APPS;
+
+/* --- Inicio de la prueba --- */
+$("#form-inicio").addEventListener("submit", function (ev) {
+  ev.preventDefault();
+  const nombre = $("#f-nombre").value.trim();
+  const organizacion = $("#f-org").value.trim();
+  const municipio = $("#f-mun").value.trim();
+  const correo = $("#f-correo").value.trim();
+  const error = $("#error-inicio");
+
+  const faltan = [];
+  if (nombre.length < 3) faltan.push("su nombre completo");
+  if (!organizacion) faltan.push("su organización o proceso social");
+  if (!municipio) faltan.push("su municipio y departamento");
+  if (correo && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) faltan.push("un correo válido (o déjelo vacío)");
+  if (!$("#f-consent").checked) faltan.push("la autorización para registrar sus respuestas");
+
+  if (faltan.length) {
+    error.textContent = "Falta " + faltan.join("; ") + ".";
+    error.classList.remove("oculto");
+    return;
+  }
+  error.classList.add("oculto");
+  iniciarPrueba({ nombre: nombre, organizacion: organizacion, municipio: municipio, correo: correo });
+});
+
+$("#btn-reiniciar").addEventListener("click", function () {
+  $("#f-consent").checked = false;
+  mostrar("vista-inicio");
+});
+
+/* --- Acceso al panel --- */
+function panelAbierto() {
+  try { return sessionStorage.getItem("pec_admin") === "1"; } catch (e) { return false; }
+}
+function abrirPanel() {
+  if (panelAbierto()) {
+    cargarConfigEnFormulario();
+    pintarPanel();
+    mostrar("vista-admin");
+  } else {
+    mostrar("vista-login");
+    setTimeout(function () { $("#f-pass").focus(); }, 60);
+  }
+}
+
+$("#btn-panel").addEventListener("click", function () {
+  if (sesion && $("#vista-test").classList.contains("oculto") === false) {
+    if (!confirm("Está en medio de la prueba. ¿Salir y perder el avance?")) return;
+  }
+  location.hash = "#panel";
+  abrirPanel();
+});
+
+$("#btn-volver-inicio").addEventListener("click", function () {
+  location.hash = "";
+  mostrar("vista-inicio");
+});
+
+$("#form-login").addEventListener("submit", async function (ev) {
+  ev.preventDefault();
+  const error = $("#error-login");
+  const cfg = config();
+  const esperado = cfg.passHash || await sha256(PASS_INICIAL);
+  const entregado = await sha256($("#f-pass").value);
+  if (entregado === esperado) {
+    try { sessionStorage.setItem("pec_admin", "1"); } catch (e) {}
+    $("#f-pass").value = "";
+    error.classList.add("oculto");
+    abrirPanel();
+  } else {
+    error.textContent = "Contraseña incorrecta.";
+    error.classList.remove("oculto");
+  }
+});
+
+$("#btn-salir").addEventListener("click", function () {
+  try { sessionStorage.removeItem("pec_admin"); } catch (e) {}
+  location.hash = "";
+  mostrar("vista-inicio");
+});
+
+/* --- Pestañas del panel --- */
+const PESTANAS = [
+  ["tab-resumen", "p-resumen"],
+  ["tab-participantes", "p-participantes"],
+  ["tab-preguntas", "p-preguntas"],
+  ["tab-config", "p-config"]
+];
+PESTANAS.forEach(function (par) {
+  $("#" + par[0]).addEventListener("click", function () {
+    PESTANAS.forEach(function (otro) {
+      const activo = otro[0] === par[0];
+      $("#" + otro[0]).setAttribute("aria-selected", activo ? "true" : "false");
+      $("#" + otro[1]).classList.toggle("oculto", !activo);
+    });
+  });
+});
+
+/* --- Búsqueda --- */
+let temporizadorBusqueda = 0;
+$("#f-buscar").addEventListener("input", function (ev) {
+  clearTimeout(temporizadorBusqueda);
+  temporizadorBusqueda = setTimeout(function () {
+    filtroBusqueda = ev.target.value;
+    pintarPanel();
+  }, 200);
+});
+
+/* --- Exportar --- */
+$("#btn-csv").addEventListener("click", function () {
+  const regs = registros();
+  if (!regs.length) { avisar("No hay registros para exportar."); return; }
+  descargar("resultados-estado-colombiano.csv", aCsv(regs), "text/csv");
+});
+$("#btn-json").addEventListener("click", function () {
+  const regs = registros();
+  if (!regs.length) { avisar("No hay registros para exportar."); return; }
+  descargar("resultados-estado-colombiano.json", JSON.stringify(regs, null, 2), "application/json");
+});
+
+/* --- Sincronizar con el repositorio central --- */
+$("#btn-sincronizar").addEventListener("click", async function () {
+  const boton = $("#btn-sincronizar");
+  if (!config().endpoint) {
+    avisar("Configure primero el repositorio central en la pestaña Configuración.");
+    return;
+  }
+  boton.disabled = true;
+  boton.textContent = "Sincronizando…";
+  try {
+    const lista = await traerRemoto();
+    const nuevos = fusionar(lista);
+    pintarPanel();
+    avisar(nuevos ? "Se incorporaron " + nuevos + " registros nuevos." : "Todo está al día.");
+  } catch (e) {
+    avisar("No se pudo sincronizar: " + e.message);
+  }
+  boton.disabled = false;
+  boton.textContent = "Sincronizar";
+});
+
+/* --- Configuración: repositorio central --- */
+function cargarConfigEnFormulario() {
+  const cfg = config();
+  $("#f-endpoint").value = cfg.endpoint || "";
+  $("#f-clave-api").value = cfg.claveApi || "";
+}
+
+$("#btn-guardar-endpoint").addEventListener("click", function () {
+  const cfg = config();
+  cfg.endpoint = $("#f-endpoint").value.trim();
+  cfg.claveApi = $("#f-clave-api").value.trim();
+  guardarConfig(cfg);
+  $("#estado-endpoint").innerHTML = cfg.endpoint
+    ? '<div class="aviso bueno"><span>Repositorio guardado. Los próximos resultados se enviarán allí automáticamente.</span></div>'
+    : '<div class="aviso"><span>Sin repositorio central: los resultados quedarán solo en el dispositivo de cada participante.</span></div>';
+});
+
+$("#btn-probar-endpoint").addEventListener("click", async function () {
+  const cfg = config();
+  cfg.endpoint = $("#f-endpoint").value.trim();
+  cfg.claveApi = $("#f-clave-api").value.trim();
+  guardarConfig(cfg);
+  const zona = $("#estado-endpoint");
+  if (!cfg.endpoint) {
+    zona.innerHTML = '<div class="aviso malo"><span>Escriba primero la URL del servicio.</span></div>';
+    return;
+  }
+  zona.innerHTML = '<div class="aviso"><span>Probando conexión…</span></div>';
+  try {
+    const lista = await traerRemoto();
+    zona.innerHTML = '<div class="aviso bueno"><span>Conexión correcta. El repositorio tiene ' +
+      lista.length + (lista.length === 1 ? " registro." : " registros.") + '</span></div>';
+  } catch (e) {
+    zona.innerHTML = '<div class="aviso malo"><span>No se pudo conectar: ' + esc(e.message) +
+      '. Verifique la URL (debe terminar en /exec), la clave y que la implementación permita el acceso de cualquier persona.</span></div>';
+  }
+});
+
+$("#btn-copiar-script").addEventListener("click", function () {
+  copiar(SCRIPT_APPS, "Código del script copiado.");
+});
+
+/* --- Configuración: contraseña --- */
+$("#btn-cambiar-pass").addEventListener("click", async function () {
+  const nueva = $("#f-nueva-pass").value;
+  const zona = $("#estado-pass");
+  if (nueva.length < 8) {
+    zona.innerHTML = '<div class="aviso malo"><span>La contraseña debe tener al menos 8 caracteres.</span></div>';
+    return;
+  }
+  const cfg = config();
+  cfg.passHash = await sha256(nueva);
+  guardarConfig(cfg);
+  $("#f-nueva-pass").value = "";
+  zona.innerHTML = '<div class="aviso bueno"><span>Contraseña actualizada en este dispositivo. ' +
+    'Recuerde que cada dispositivo guarda su propia configuración.</span></div>';
+});
+
+/* --- Configuración: importar --- */
+function importarTexto(texto) {
+  const zona = $("#estado-importar");
+  const encontrados = [];
+  const fallidos = [];
+
+  const limpio = texto.trim();
+  if (!limpio) {
+    zona.innerHTML = '<div class="aviso malo"><span>No hay nada que importar.</span></div>';
+    return;
+  }
+
+  // Primero se intenta como archivo JSON completo (exportación del panel).
+  try {
+    const directo = JSON.parse(limpio);
+    if (Array.isArray(directo)) directo.forEach(function (r) { encontrados.push(r); });
+    else if (directo && directo.id) encontrados.push(directo);
+  } catch (e) { /* no era JSON: se procesa línea por línea */ }
+
+  if (!encontrados.length) {
+    limpio.split(/\r?\n/).forEach(function (linea) {
+      const l = linea.trim();
+      if (!l) return;
+      try {
+        const cuerpo = l.indexOf("PEC1:") === 0 ? l.slice(5) : l;
+        const registro = JSON.parse(deB64(cuerpo));
+        if (registro && registro.id) encontrados.push(registro);
+        else fallidos.push(l.slice(0, 20));
+      } catch (e) { fallidos.push(l.slice(0, 20)); }
+    });
+  }
+
+  if (!encontrados.length) {
+    zona.innerHTML = '<div class="aviso malo"><span>No se reconoció ningún resultado válido. ' +
+      'Verifique que pegó los códigos completos, uno por línea.</span></div>';
+    return;
+  }
+
+  const nuevos = fusionar(encontrados);
+  pintarPanel();
+  $("#f-importar").value = "";
+  zona.innerHTML = '<div class="aviso bueno"><span>' + nuevos + ' de ' + encontrados.length +
+    ' resultados incorporados' + (nuevos < encontrados.length ? " (el resto ya estaba registrado)" : "") + '.' +
+    (fallidos.length ? " No se pudieron leer " + fallidos.length + " líneas." : "") + '</span></div>';
+}
+
+$("#btn-importar").addEventListener("click", function () { importarTexto($("#f-importar").value); });
+$("#btn-archivo").addEventListener("click", function () { $("#f-archivo").click(); });
+$("#f-archivo").addEventListener("change", function (ev) {
+  const archivo = ev.target.files && ev.target.files[0];
+  if (!archivo) return;
+  const lector = new FileReader();
+  lector.onload = function () { importarTexto(String(lector.result)); };
+  lector.readAsText(archivo);
+  ev.target.value = "";
+});
+
+/* --- Configuración: compartir y borrar --- */
+$("#btn-copiar-enlace").addEventListener("click", function () {
+  const enlace = location.href.split("#")[0];
+  copiar(enlace, "Enlace copiado. Compártalo con las personas participantes.");
+});
+
+$("#btn-borrar").addEventListener("click", function () {
+  const total = registros().length;
+  if (!total) { avisar("No hay registros que borrar."); return; }
+  if (!confirm("Se borrarán los " + total + " registros guardados en este dispositivo. " +
+    "Los que estén en el repositorio central no se tocan. ¿Continuar?")) return;
+  if (!confirm("Confirme de nuevo: esta acción no se puede deshacer.")) return;
+  guardarRegistros([]);
+  filtroBusqueda = "";
+  $("#f-buscar").value = "";
+  pintarPanel();
+  avisar("Registros borrados de este dispositivo.");
+});
+
+/* --- Enrutamiento por ancla --- */
+window.addEventListener("hashchange", function () {
+  if (location.hash === "#panel") abrirPanel();
+  else if ($("#vista-admin").classList.contains("oculto") === false ||
+           $("#vista-login").classList.contains("oculto") === false) {
+    mostrar("vista-inicio");
+  }
+});
+
+if (location.hash === "#panel") abrirPanel();
+</script>
+</body>
+</html>
