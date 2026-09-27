@@ -4067,5 +4067,511 @@
         ]
       }
     ]
+  },
+  {
+    "title": "Sabores de la cocina mediterránea",
+    "source": "Recetario, Sabores de la cocina mediterránea.pdf",
+    "recipe_count": 21,
+    "recipes": [
+      {
+        "title": "Crostinis de berenjena y tomates asados",
+        "ingredients": [
+          "6 tomates chontos maduros",
+          "10 gr de orégano seco",
+          "1 berenjena",
+          "1 cabeza de ajo",
+          "30 gr albahaca fresca",
+          "50 gr de queso mozzarella o parmesano",
+          "20 ml de aceite de oliva o vegetal",
+          "1 pan francés",
+          "Sal marina o rosada y pimienta en semilla al gusto"
+        ],
+        "procedure": [
+          "Corte los tomates en rodajas gruesas y disponga en una lámina de horno, sazone con sal y pimienta más aceite de ajo y orégano.",
+          "Corte la berenjena en rodajas no muy gruesas aprox 1 cm, dispóngalas en agua con abundante sal y enjuague después de 5 minutos, repita este proceso por lo menos 3 veces, disponga con los tomates en la misma lata y sazone con sal y pimienta más aceite de oliva.",
+          "Agregue el queso con la albahaca fresca y lleve al horno a 180°C por 20 minutos, deje reposar.",
+          "Corte el pan en trozos alargados tipo sánduche y saborice con aceite y ajo, disponga los tomates, la berenjena y el queso y lleve a gratinar por 5 minutos o hasta dorar.",
+          "Retire y sirva si lo desea con más aceite de oliva y vinagre balsámico."
+        ]
+      },
+      {
+        "title": "Baklava",
+        "ingredients": [
+          "200 gr de pasta filo",
+          "100 gr de pistachos",
+          "1 manzana verde",
+          "20 gr de ciruelas pasas",
+          "7 gr de canela",
+          "100 gr de miel",
+          "20 gr de mantequilla",
+          "20 ml de aceite de oliva"
+        ],
+        "procedure": [
+          "Porcione la manzana en cubos, la ciruela en trozos y triture los pistachos o cualquier fruto seco que desee.",
+          "Lleve a la sartén una cucharada de mantequilla clarificada, agregue las manzanas y deje cocinar un poco, agregue seguido la miel, canela, ciruelas e integre muy bien.",
+          "Finalice adicionando los pistachos (deje un poco para servir al finalizar) y mezcle hasta lograr una textura homogénea semihúmeda.",
+          "En un recipiente engrase con un poco de aceite de oliva y forme capas de la masa filo y la mezcla de frutas y especias finalizando con la capa de pasta filo.",
+          "Pincele un poco con mantequilla y lleve al horno a 180°C por 10 minutos hasta dorar.",
+          "Sirva al gusto y decore con un poco de los pistachos triturados."
+        ]
+      },
+      {
+        "title": "Mahshi",
+        "ingredients": [
+          "500 gr de arroz",
+          "7 gr de canela",
+          "5 gr de nuez moscada",
+          "7 gr de semillas de cilantro",
+          "50 gr de fideos",
+          "1 cebolla de huevo morada",
+          "60 gr de frutos secos",
+          "2 pimentones",
+          "1 berenjena",
+          "2 pepinos para rellenar grandes",
+          "1 pechuga de pollo",
+          "50 gr de cebollín",
+          "3 tomates chontos maduros",
+          "1 cebolla de huevo",
+          "50 gr de pasta de tomate",
+          "Sal rosada y pimienta en grano al gusto"
+        ],
+        "procedure": [
+          "Corte la cebolla finamente y dore con los frutos secos, las especias y las semillas de cilantro en la sartén con un poco de aceite.",
+          "Agregue el arroz y cocine por 13 minutos o hasta lograr la cocción ideal.",
+          "Sazone el pollo y saltee con la berenjena cortada en cubos en un sartén con aceite, sal y pimienta.",
+          "Mezcle el arroz con el pollo y la berenjena salteada más el cebollín cortado finamente. Reserve.",
+          "Prepare un sofrito con el tomate cortado en cubos pequeños, pasta de tomate, la cebolla, aceite, sal y pimienta, cocine por unos minutos y agregue 1 pocillo de agua, deje reducir y rectifique su sabor, reserve.",
+          "Limpie los pimentones y los pepinos, rellene con la mezcla de arroz y lleve al horno por 10 minutos a 180°C, retire y sirva con pan pita y aceite de hierbas."
+        ]
+      },
+      {
+        "title": "Durum",
+        "ingredients": [
+          "1 kilo de pechugas de pollo sin el hueso",
+          "2 cebollas moradas",
+          "80 ml de aceite de oliva",
+          "8 panes (árabes o pita)",
+          "Sal y pimienta",
+          "20 gr de cilantro",
+          "1 cucharadita de comino",
+          "1 cucharada de cúrcuma",
+          "1 cucharadita de pimienta negra",
+          "1 cucharadita de pimienta blanca"
+        ],
+        "procedure": [
+          "Disponga los trozos de pollo en una bandeja y agregue la cebolla cortada encima.",
+          "Mezcle todas las especias en un tazón pequeño.",
+          "Sazone la cebolla y el pollo con la mezcla de especias.",
+          "Añada todo el aceite de oliva al pollo.",
+          "Coloque todos los ingredientes en una sartén grande a fuego medio hasta que el pollo esté cocido.",
+          "Corte el pan por la mitad y rellénelo con el shawarma de pollo."
+        ]
+      },
+      {
+        "title": "Dolma",
+        "ingredients": [
+          "1 frasco de hojas de parra, lechuga o hojas de repollo",
+          "1 taza de cous cous",
+          "1/2 pimiento rojo",
+          "1/2 pimiento amarillo",
+          "1 cebollín en láminas",
+          "2 cucharadas de pasas",
+          "50 gr de almendras tostadas y picadas",
+          "Perejil",
+          "Cilantro",
+          "Menta",
+          "Jugo de 1 limón",
+          "Aceite de oliva"
+        ],
+        "procedure": [
+          "Hidratar el cous cous 20 minutos en un bol con una taza de agua, debe tapar al cous por completo.",
+          "Añadir el zumo de limón, el aceite de oliva y la sal, y dejar que se consuma todo el líquido.",
+          "Cortar todas las verduras en brunoise, y picar las hierbas.",
+          "Mezclar el cous cous con las verduras y los demás ingredientes.",
+          "Montar los dolmas colocando sobre la hoja de parra, lechuga o repollo una cucharada de cous y cerrarla primero de los lados y luego enrollarlas.",
+          "Guardar en nevera hasta el momento de servir, se pueden acompañar con hummus, babaganoush o una salsa de yogur de soja y pepino."
+        ]
+      },
+      {
+        "title": "Salata od hobotnice",
+        "ingredients": [
+          "½ lechuga batavia",
+          "1 tomate chonto maduro",
+          "¼ de cebolla morada",
+          "20 gr de mango tommy",
+          "1 naranja",
+          "500 gr de pulpo",
+          "1 limón tahití",
+          "75 ml aceite de oliva virgen extra",
+          "2 dientes de ajo",
+          "70 gr de aceitunas",
+          "10 gr de perejil",
+          "Sal y pimienta al gusto"
+        ],
+        "procedure": [
+          "Pique finamente el ajo, la cebolla en plumilla y el tomate en cubos y mezcle en un bowl.",
+          "Saque cascos de naranja y agregue a la mezcla anterior con el mango cortado en cubos pequeños.",
+          "Trocee la lechuga y reserve en agua para servir.",
+          "Cocine el pulpo 20 minutos y deje reposar otros 15 minutos en el medio donde se cocinó.",
+          "Corte el pulpo en trozos y agregue a la mezcla.",
+          "Integre finalmente las aceitunas cortadas en rodajas, el aceite de oliva, sal y pimienta, el jugo de la naranja y ralladura de limón.",
+          "Disponga una cama de lechuga, salpimiente y sirva la ensalada de pulpo, acompañe con tostones de pan."
+        ]
+      },
+      {
+        "title": "Rožata",
+        "ingredients": [
+          "500 ml de leche entera",
+          "100 ml de agua de rosas",
+          "150 g de azúcar orgánica o miel",
+          "1 cucharada de azúcar de vainilla",
+          "1 limón",
+          "4 huevos enteros",
+          "1 yema de huevo",
+          "10 gr de mantequilla para los moldes",
+          "— Para el caramelo —",
+          "200 g de azúcar orgánica o miel",
+          "1 cucharada de agua"
+        ],
+        "procedure": [
+          "Caliente la leche, el azúcar o miel, vainilla, la ralladura de limón y el agua de rosas. Deje enfriar.",
+          "En un tazón grande, bata los huevos y las yemas y mezcle con la leche.",
+          "Caliente el horno a 180°C.",
+          "En una cacerola, agregue el azúcar y el agua y cocine a fuego bajo a medio, hasta que el caramelo se vuelva ámbar.",
+          "Engrase los moldes o una fuente grande para hornear con mantequilla.",
+          "Vierta 1 cucharadita de caramelo en el fondo de cada molde o 4 cucharadas en el fondo de una sartén grande y vierta la preparación encima.",
+          "Coloque el molde o moldes en un baño maría (baño de agua) y cocine en el horno durante unos 30 minutos si son moldes individuales o 40 minutos si es un molde grande y único.",
+          "Deje enfriar en el refrigerador."
+        ]
+      },
+      {
+        "title": "Mish-mash",
+        "ingredients": [
+          "250 gr de uva isabella",
+          "1 naranja",
+          "2 limones",
+          "250 ml de soda",
+          "Hielo al gusto"
+        ],
+        "procedure": [
+          "Licue las uvas en ½ litro de agua y cuele.",
+          "Exprima las naranjas y los limones y mezcle con el licuado de uva.",
+          "Sirva agregando hielo y rodajas de limón.",
+          "Puede agregar manzanas verdes o frutos rojos."
+        ]
+      },
+      {
+        "title": "Gazpacho andaluz",
+        "ingredients": [
+          "3 tomates chontos maduros",
+          "3 dientes de ajo",
+          "¼ de pan francés",
+          "1 pepino cohombro",
+          "1 pimentón verde",
+          "20 ml de vinagre de frutas o balsámico",
+          "1 pan francés",
+          "100 ml de mantequilla",
+          "20 ml de aceite de oliva",
+          "Sal y pimienta al gusto"
+        ],
+        "procedure": [
+          "Corte los vegetales en trozos pequeños que quepan en la licuadora y reserve.",
+          "Corte los panes en diagonal y unte con un poco de mantequilla y ajo cortado finamente.",
+          "Lleve a licuar el tomate, el pepino, el pimentón, trozos de pan francés o tostada o galleta de soda, el ajo y opcional cebolla con agua hasta que cubra los productos.",
+          "Después de licuar pase por el colador hasta obtener una mezcla muy suave y sin grumos.",
+          "Dore los panes untados de mantequilla y ajo en un sartén o al horno rápidamente.",
+          "Reserve un poco del tomate, pimentón y pepino para servir al final con un poco de aceite de oliva."
+        ]
+      },
+      {
+        "title": "Pepinos rellenos de paella española",
+        "ingredients": [
+          "5 pepinos para rellenar",
+          "100 gr de camarones",
+          "50 gr de arvejas",
+          "50 gr de habichuela",
+          "200 gr de arroz arbóreo",
+          "1 zanahoria",
+          "300 gr de calamar o pulpo",
+          "1 pimentón rojo",
+          "2 dientes de ajo",
+          "2 tomates chontos",
+          "30 gr de perejil",
+          "2 cucharadas de azafrán puro",
+          "2 gr de comino en semilla",
+          "100 gr de queso mozzarella",
+          "2 gr de semillas de cilantro",
+          "2 gr de cúrcuma",
+          "1 pimentón rojo",
+          "100 gr de hueso de pescado"
+        ],
+        "procedure": [
+          "Lleve a blanquear la zanahoria cortada en cubos, la habichuela en diagonal y las arvejas desgranadas.",
+          "Prepare un fondo de pescado con los huesos, cúrcuma o azafrán, hierbas y poca sal.",
+          "Corte en cubos pequeños los pimentones, el ajo y el tomate y lleve a dorar en aceite en un sartén poco profundo más el perejil finamente picado, las semillas de comino y cilantro.",
+          "Agregue el arroz y cocine hasta que dore un poco.",
+          "Agregue el fondo hasta cubrir el arroz y remueva ocasionalmente, rectifique sal y pimienta, agregue los frutos de mar antes de finalizar la cocción del arroz.",
+          "Rellene los pepinos previamente limpios en su interior con la paella y cubra con el queso mozzarella, lleve al horno por 10 minutos a 180°C, retire y sirva."
+        ]
+      },
+      {
+        "title": "Moussaka chipriota",
+        "ingredients": [
+          "1 berenjena",
+          "1 zuquini",
+          "250 gr de carne de cerdo molida",
+          "2 tomates chontos",
+          "1 cebolla de huevo morada",
+          "3 dientes de ajo",
+          "75 ml de aceite de oliva",
+          "20 gr de pasta de tomate",
+          "200 gr de queso mozzarella",
+          "1 pimentón rojo",
+          "1 yogurt griego o kumis",
+          "200 gr de crema de leche"
+        ],
+        "procedure": [
+          "Corte las berenjenas en rodajas y disponga en agua con abundante sal y reserve.",
+          "Corte en trozos la cebolla de huevo, el tomate y el ajo y lleve a la sartén con aceite y pasta de tomate, deje cocinar hasta ablandar los vegetales y agregue agua hasta llegar a la mitad, cocine por 5 minutos más y licue.",
+          "Lleve esta salsa de vuelta al sartén o al caldero y rectifique la sal, debe quedar semilíquida o espesa para esparcir.",
+          "Dore en un sartén la carne con aceite, ajo, sal y pimienta, agregue también un poco de pasta de tomate y si desea algunas hierbas como orégano, laurel o tomillo.",
+          "Agregue la carne a la salsa atomatada preparada anteriormente, integre hasta homogenizar y lograr una mezcla semilíquida.",
+          "En un bowl mezcle el yogurt griego con sal y pimienta más la crema de leche.",
+          "Enjuague las berenjenas y empiece a formar capas en una refractaria con la carne, el queso, la salsa de yogur y finalizar con berenjena y queso.",
+          "Lleve a gratinar y sirva con pan pita."
+        ]
+      },
+      {
+        "title": "Soda de rosas y pepino",
+        "ingredients": [
+          "1 rosa blanca",
+          "½ pepino cohombro",
+          "1 taza de hielo",
+          "2 naranjas tangelo",
+          "200 ml de agua de rosas",
+          "100 ml de soda",
+          "Endulzante al gusto (miel, panela)"
+        ],
+        "procedure": [
+          "Corte rodajas o láminas de pepino y reserve.",
+          "Exprima la naranja y el limón.",
+          "Corte algunas rodajas de limón o naranja y reserve.",
+          "Sirva en un vaso o copa los hielos, las rosas, agua de rosas, jugo de los cítricos y rodajas de los mismos, mezcle muy bien.",
+          "Finalice agregando la soda y endulzante de su gusto."
+        ]
+      },
+      {
+        "title": "Salmón en croûte",
+        "ingredients": [
+          "200 gr de pasta larga",
+          "250 gr de camarones",
+          "250 gr de mejillones",
+          "4 tomates chontos maduros",
+          "4 dientes de ajo",
+          "1 cebolla de huevo morada",
+          "200 ml de crema de coco",
+          "Pimienta de cayena al gusto",
+          "100 gr de pasta de tomate",
+          "20 gr de paprika",
+          "Sal y pimienta"
+        ],
+        "procedure": [
+          "Pique finamente el ajo, la cebolla y 2 tomates, sofría en aceite sin dejarlo quemar, agregue la crema de coco y la pasta de tomate y deje cocinar a fuego bajo.",
+          "Pele los 2 tomates restantes y licue, agregue a la mezcla anterior e integre muy bien, rectifique sal y pimienta y adicione la paprika y el picante.",
+          "Ponga los mejillones y los camarones y deje cocinar por unos minutos más hasta lograr la cremosidad deseada.",
+          "Cocine la pasta en agua abundante con sal hasta ablandar, sirva como base y bañe con la salsa."
+        ]
+      },
+      {
+        "title": "Soufflé ratatouille",
+        "ingredients": [
+          "150 ml de leche",
+          "3 huevos",
+          "15 gr de harina de trigo",
+          "20 gr de mantequilla",
+          "Tomillo o laurel",
+          "1 cebolla de huevo morada",
+          "1 berenjena",
+          "1 zuquini",
+          "5 tomates chontos maduros",
+          "2 dientes de ajo",
+          "20 gr de pasta de tomate",
+          "50 ml de aceite de oliva",
+          "Sal y pimienta al gusto"
+        ],
+        "procedure": [
+          "Corte en rodajas el zuquini, 2 tomates y la berenjena, sazone con sal y pimienta, reserve.",
+          "Prepare una base de tomate casera cocinando tomate cortado en cubos con la cebolla, harina de trigo, mantequilla, ajo, aceite de oliva, tomillo o laurel, sal y pimienta, luego agregue leche, cocine por 5 minutos más y licue hasta obtener una salsa cremosa o densa.",
+          "Bata los huevos hasta lograr airearlos u obtener que doblen volumen, agregue a la salsa cremosa de tomate e integre muy bien.",
+          "Enharine los moldes de soufflé con mantequilla y harina y disponga un poco de la salsa y las rodajas de los vegetales formando una corona, lleve al horno a 180°C durante 15 minutos y sirva."
+        ]
+      },
+      {
+        "title": "Tzatziki",
+        "ingredients": [
+          "1 pepino cohombro",
+          "1 yogur griego",
+          "1 diente de ajo",
+          "1 limón",
+          "10 gr de menta",
+          "10 gr de eneldo",
+          "Sal y pimienta al gusto",
+          "2 cucharadas de aceite de oliva virgen extra"
+        ],
+        "procedure": [
+          "Pele el pepino y retire la zona central de pepitas, ya que si se añaden a la salsa podría quedar muy líquida. Rállelo muy finito y déjelo escurriendo en un colador, con un poquito de sal.",
+          "Al cabo de unos 5 minutos, presione el pepino para que termine de escurrir su agua.",
+          "En un bowl ponga el pepino con el aceite y el yogur griego, y mezcle bien.",
+          "Añada el diente de ajo picado muy finito, menta o perejil bien picados, eneldo y el zumo de limón. Mezcle todos los ingredientes para que quede una crema lo más homogénea posible.",
+          "Deje el bol reposando en la nevera, tapado con papel film, durante al menos 30 minutos.",
+          "Sirva al gusto."
+        ]
+      },
+      {
+        "title": "Yemistá",
+        "ingredients": [
+          "2 tomates chontos",
+          "1 berenjena",
+          "1 pimentón verde",
+          "200 gr de arroz bomba o arbóreo",
+          "200 gr de solomito de res o cerdo",
+          "2 dientes de ajo",
+          "½ calabacín",
+          "1 cebolla de huevo morada",
+          "75 ml de aceite de oliva",
+          "30 gr de yerbabuena o menta",
+          "Sal y pimienta al gusto"
+        ],
+        "procedure": [
+          "Corte la base del tomate, los pimentones y la berenjena a la mitad y retire el relleno dejando estos vegetales huecos.",
+          "Lleve a una sartén con aceite la cebolla y el ajo finamente picado y cocine por 5 minutos, luego agregue el arroz hasta que dore.",
+          "Prepare un fondo de vegetales empleando agua, el relleno de los vegetales y algunas hierbas.",
+          "Agregue este fondo o agua al arroz y deje cocinar.",
+          "Corte la carne en cubos pequeños y selle en la sartén con ajo, sal y pimienta y agregue al arroz cuando esté listo.",
+          "Rellene los vegetales con el arroz y cúbralos con la base retirada (tapa) y lleve al horno por 25 minutos a 175°C o hasta ver cocidos los vegetales.",
+          "Puede gratinar o bañar con salsa bechamel."
+        ]
+      },
+      {
+        "title": "Salata Joriátiki (ensalada griega)",
+        "ingredients": [
+          "4 cucharadas de aceite de oliva",
+          "20 ml de vinagre",
+          "1 diente de ajo",
+          "1 cucharadita de orégano seco",
+          "1 pepino cohombro",
+          "50 gr de tomates cherry",
+          "1 cebolla morada",
+          "150 gr de queso feta",
+          "70 gr de aceitunas negras",
+          "1 limón",
+          "100 gr de kale",
+          "1 lechuga romana"
+        ],
+        "procedure": [
+          "Ponga el aceite, vinagre, ajo y orégano en un frasco y agite bien. Sazone con sal y pimienta.",
+          "Combine en una ensaladera las rebanadas de pepino, los tomates partidos en 4, las aceitunas, el queso partido en cuadros grandes, la lechuga troceada y el kale, rocíe con el jugo de limón.",
+          "Ponga el aderezo, revuelva bien y revise si necesita más sal y pimienta. Lleve al refrigerador por 20 minutos para resaltar el sabor."
+        ]
+      },
+      {
+        "title": "Saltadito marroquí",
+        "ingredients": [
+          "1 pechuga de pollo",
+          "100 gr de habichuelas",
+          "5 gr de comino",
+          "1 mazorca",
+          "5 gr de cardamomo",
+          "5 gr de canela en polvo",
+          "5 gr de cúrcuma",
+          "1 cebolla de huevo morada",
+          "20 gr de mantequilla",
+          "2 tomates chontos",
+          "30 gr de yerbabuena",
+          "30 ml de aceite de oliva",
+          "250 ml de caldo de pollo",
+          "2 hojas de laurel",
+          "20 gr de comino",
+          "1 zanahoria",
+          "Sal y pimienta al gusto"
+        ],
+        "procedure": [
+          "Sazone el pollo con un poco de las especias y condimentos.",
+          "Lleve a sellar el pollo a una sartén con aceite y reserve.",
+          "En el mismo sartén disponga la mantequilla, aceite, la cebolla de huevo cortada finamente y el resto de las especias, cocine por unos minutos más hasta lograr que la cebolla esté traslúcida y empiece a caramelizarse, adicione en este punto el tomate cortado en trozos.",
+          "Agregue el caldo de pollo o en caso de usar pescado caldo de pescado, adicione la mazorca desgranada, la habichuela, la zanahoria cortada en trozos, hojas de laurel y el pollo.",
+          "Deje cocinar por 5 minutos más y finalice con hojas de hierbabuena."
+        ]
+      },
+      {
+        "title": "Ensalada de melón marroquí",
+        "ingredients": [
+          "1 melón maduro",
+          "1 naranja",
+          "5 gr de semillas de cilantro",
+          "1 aguacate",
+          "20 gr de ciruelas pasas",
+          "3 gr de canela en polvo",
+          "1 mango tommy",
+          "1 pimiento rojo",
+          "20 gr de miel",
+          "20 ml de vinagre de frutas",
+          "100 gr de rúcula"
+        ],
+        "procedure": [
+          "Corte en cubos el melón, el mango en tiras, en cascos la naranja, en mitades el tomate cherry, el pimentón en cubos pequeños y las ciruelas en trozos pequeños, mezcle muy bien.",
+          "Agregue las semillas de cilantro y demás especias más la miel y el vinagre.",
+          "Finalice agregando la rúcula y el aguacate."
+        ]
+      },
+      {
+        "title": "Albóndigas de pollo y garbanzo al curry",
+        "ingredients": [
+          "500 gr de pechuga de pollo",
+          "20 gr de canela",
+          "1 cebolla de huevo",
+          "1 tallo de apio",
+          "10 gr de arándanos deshidratados",
+          "20 gr de ciruelas pasas",
+          "30 gr de curry en polvo",
+          "250 gr de yogurt griego",
+          "500 gr de crema de leche",
+          "20 gr de paprika",
+          "10 gr de hojas de yerbabuena",
+          "100 gr de harina de garbanzo o garbanzos cocinados",
+          "Sal y pimienta al gusto",
+          "10 gr de cebollín",
+          "200 gr de arroz",
+          "1 huevo",
+          "2 cabezas de ajo",
+          "100 gr de camarones",
+          "50 ml de aceite de oliva"
+        ],
+        "procedure": [
+          "Cocine la pechuga de pollo en agua con un poco de sal, cebolla y las hojas del apio.",
+          "Procese el pollo junto con la cebolla de huevo y el apio, mezcle luego en un bowl con la harina de garbanzo o puré de garbanzo preparado previamente.",
+          "Adicione sal y pimienta más las especias, yerbabuena finamente picada y los dátiles, el huevo y ajo, amase hasta obtener una masa consistente y que no se desarme, forme albóndigas y reserve.",
+          "Lleve a la sartén con un poco de aceite y dore las albóndigas, agregue la crema de leche, el curry, yogurt y paprika, deje cocinar hasta que obtenga el punto deseado.",
+          "Prepare un arroz blanco dorando un poco de cebolla y ajo más la cantidad de agua requerida.",
+          "Saltee los camarones en un poco de aceite y agregue al arroz con cebollín picado finamente.",
+          "Sirva las albóndigas sobre el arroz y acompañe con pan árabe."
+        ]
+      },
+      {
+        "title": "Etzai (té de menta)",
+        "ingredients": [
+          "100 gr de té verde",
+          "Agua hirviendo",
+          "Endulzante al gusto",
+          "10 gr de menta fresca",
+          "1 limón",
+          "10 gr de uchuvas"
+        ],
+        "procedure": [
+          "Caliente agua según la cantidad de té que desea preparar y agregue allí el té después de hervir.",
+          "Sirva en un pocillo trozos de uchuva, rodajas de limón, hojas de menta y el té."
+        ]
+      }
+    ]
   }
 ]
